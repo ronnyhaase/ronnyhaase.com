@@ -134,6 +134,7 @@ button {
 }
 
 .callforaction {
+	margin-top: 15px;
 	padding: 15px 30px;
 	border: none;
 	-webkit-border-radius: 5000px;
@@ -151,7 +152,7 @@ button {
 	cursor: pointer;
 }
 
-.callforaction:hover { 
+.callforaction:hover {
 	background-color: #47a447;
 }
 
