@@ -1,9 +1,11 @@
 {
+  "alias": "ronnyhaase.com",
   "files": [
     "css",
     "img",
     "js",
     "index.html",
-    "CV-ronnyhaase-public.pdf"
+    "CV-ronnyhaase-public.pdf",
+    "resume-public.pdf"
   ]
 }
