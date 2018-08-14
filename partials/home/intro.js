@@ -4,7 +4,7 @@ import { ArrowDown, Github, Linkedin, Mail, Twitter } from 'react-feather'
 import Particles from 'react-particles-js'
 import { Box } from 'grid-styled'
 
-import { Container, Headline, Image, Slide, IconButtonLink, IconButton } from '../../components'
+import { Container, Headline, IconButtonLink, IconButton, Image, SROnly, Slide } from '../../components'
 import { FadeInBottom, FadeInLeft, FadeInRight, FadeIn, ZoomIn } from '../../components/animations'
 import particlesConfig from '../../styles/particles-config'
 
@@ -53,6 +53,7 @@ const Intro = () => (
             outlined
           >
             <Github size={28} />
+            <SROnly focusable>Link to Github profile</SROnly>
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
@@ -63,6 +64,7 @@ const Intro = () => (
             outlined
           >
             <Linkedin size={28} />
+            <SROnly focusable>Link to LinkedIn profile</SROnly>
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
@@ -73,6 +75,7 @@ const Intro = () => (
             outlined
           >
             <Twitter size={28} />
+            <SROnly focusable>Link to Twitter profile</SROnly>
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
@@ -83,6 +86,7 @@ const Intro = () => (
             outlined
           >
             <Mail size={28} />
+            <SROnly focusable>Write me an e-mail</SROnly>
           </ZoomIn>
         </center>
       </div>
@@ -92,6 +96,7 @@ const Intro = () => (
             is={IconButton}
             animationDelay="2500ms"
             animationDuration="500ms"
+            aria-label="Scroll to further content"
             boxShadow="1px 1px 6px rgba(0,0,0,.5)"
             p="8px !important"
             onClick={() => jump('#about-me')}
