@@ -30,7 +30,7 @@ const font = {
   size: {
     base: 16,
     sm: '0.875rem',
-    rg: '1rem',
+    rg: '1.125rem',
     md: '1.25rem',
     lg: '1.5rem',
     xl: '2rem',

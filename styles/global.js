@@ -16,7 +16,7 @@ export default `
   body {
     margin: 0;
     font-family: ${font.family.sans};
-    font-size: ${font.size.md};
+    font-size: ${font.size.rg};
     line-height: 1.75;
   }
 
