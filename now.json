@@ -1,0 +1,13 @@
+{
+  "name": "ronnyhaase.com",
+  "alias": "v2.ronnyhaase.com",
+  "type": "static",
+  "public": false,
+  "files": [
+    "out"
+  ],
+  "static": {
+    "public": "out",
+    "directoryListing": false
+  }
+}
