@@ -1,0 +1,9 @@
+{
+  "extends": ["standard", "standard-react"],
+  "globals": {},
+  "rules": {
+    "camelcase": 0,
+    "jsx-quotes": ["error", "prefer-double"],
+    "react/prop-types": 0
+  }
+}

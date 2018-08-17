@@ -1,0 +1,45 @@
+{
+  "name": "ronnyhaase.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "export": "next build && next export",
+    "lint": "eslint .",
+    "start": "next start"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git rm -r out/ && npm run export && git add out/"
+    }
+  },
+  "author": "Ronny Haase <ronnyhaase@fastmail.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "clean-tag": "^2.0.0",
+    "grid-styled": "^5.0.2",
+    "jump.js": "^1.0.2",
+    "next": "^6.1.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-feather": "^1.1.1",
+    "react-particles-js": "^2.3.0",
+    "styled-components": "3.3.3",
+    "styled-system": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
+    "eslint": "^5.3.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "husky": "^1.0.0-rc.13"
+  }
+}

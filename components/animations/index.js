@@ -1,0 +1,5 @@
+export { default as FadeIn } from './fade-in'
+export { default as FadeInBottom } from './fade-in-bottom'
+export { default as FadeInLeft } from './fade-in-left'
+export { default as FadeInRight } from './fade-in-right'
+export { default as ZoomIn } from './zoom-in'
