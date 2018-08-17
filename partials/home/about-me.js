@@ -13,7 +13,7 @@ const AboutMe = () => (
         </Headline>
       </Container>
     </Box>
-    <Container>
+    <Container py="1rem">
       <Text fontFamily={font.family.sans}>
         <p>Hi! I am Ronny.</p>
         <p>

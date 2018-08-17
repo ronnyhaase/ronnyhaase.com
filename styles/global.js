@@ -36,5 +36,6 @@ export default `
 
   a {
     color: ${color.link};
+    text-decoration: none;
   }
 `

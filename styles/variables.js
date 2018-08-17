@@ -11,7 +11,7 @@ const color = {
   background: '#ffffff',
   backgroundDarker: '#f0f7fb',
   link: '#a7c894',
-  text: '#000000'
+  text: '#333'
 }
 
 const containerMaxWidths = ['none', 540, 720, 960, 1140]
@@ -29,7 +29,8 @@ const font = {
   },
   size: {
     base: 16,
-    sm: '0.875rem',
+    xs: '0.875rem',
+    sm: '1rem',
     rg: '1.125rem',
     md: '1.25rem',
     lg: '1.5rem',

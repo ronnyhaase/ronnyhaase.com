@@ -1,8 +1,9 @@
 import App, { Container } from 'next/app'
-import React from 'react'
+import React, { Fragment } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import * as theme from '../styles/variables'
+import Footer from '../partials/footer'
 
 export default class MyApp extends App {
   static async getInitialProps ({ Component, router, ctx }) {
@@ -20,7 +21,10 @@ export default class MyApp extends App {
     return (
       <Container>
         <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
+          <Fragment>
+            <Component {...pageProps} />
+            <Footer />
+          </Fragment>
         </ThemeProvider>
       </Container>
     )
