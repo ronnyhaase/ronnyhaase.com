@@ -7,11 +7,12 @@ import globalStyles from '../styles/global'
 injectGlobal`${globalStyles}`
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
+  static getInitialProps ({ renderPage, req }) {
+    const doNotTrack = (req && req.headers['dnt'] === '1') || false
     const sheet = new ServerStyleSheet()
     const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
     const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
+    return { ...page, styleTags, doNotTrack }
   }
 
   render () {
@@ -30,6 +31,16 @@ export default class MyDocument extends Document {
           <style>
             @import url(https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans)
           </style>
+          <script dangerouslySetInnerHTML={{ __html: `
+            ${this.props.doNotTrack ? "window['ga-disable-UA-24905421-1'] = true;" : ''}
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-24905421-1', {
+              storeGac: false,
+            });
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+          `}} />
+          <script async src="https://www.google-analytics.com/analytics.js" />
         </body>
       </html>
     )

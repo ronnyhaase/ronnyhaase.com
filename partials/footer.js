@@ -16,6 +16,11 @@ const Footer = ({ theme }) => (
         <a href="https://linkedin.com/in/ronnyhaase">LinkedIn</a>&nbsp;&bull;&nbsp;
         <a href="https://twitter.com/ronnyhaase">Twitter</a>
       </p>
+      <Text is="p" fontSize={theme.font.size.xs}>
+        This site uses Google Analytics, anonymizing your IP and without cookies,
+        and only to analyze page views.<br />
+        If you enabled Do Not Track, you won't get tracked at all.
+      </Text>
     </Container>
   </Box>
 )
