@@ -21,16 +21,16 @@ const Intro = () => (
     </FadeIn>
     <Container>
       <FadeInLeft animationDelay="1s" animationDuration="1.5s">
-        <Headline is="h1" p="1em 0 0 0" textAlign="center" textShadow="1px 1px 6px rgba(0,0,0,.5)">
+        <Headline is="h1" p={['1rem 0 0 0', '1em 0 0 0']} textAlign="center" textShadow="1px 1px 6px rgba(0,0,0,.5)">
           Ronny Haase
         </Headline>
       </FadeInLeft>
       <FadeInRight animationDelay="1s" animationDuration="1.5s">
-        <Headline is="h2" p="1em 0 0.5em 0" textAlign="center" textShadow="1px 1px 6px rgba(0,0,0,.5)">
+        <Headline is="h2" p={['1rem 0 1rem 0', '1em 0 0.5em 0']} textAlign="center" textShadow="1px 1px 6px rgba(0,0,0,.5)">
           Software Engineer &amp; -Architect
         </Headline>
       </FadeInRight>
-      <FadeInBottom animationDelay="1s" animationDuration="1.5s" py="1rem">
+      <FadeInBottom animationDelay="1s" animationDuration="1.5s" py={['0.25rem', '1rem']}>
         <center>
           <Image
             alt="Ronny Haase (Photo)"
