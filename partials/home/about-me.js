@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import { Container, Headline, Text } from '../../components'
 import { color, font } from '../../styles/variables'

@@ -27,14 +27,14 @@ export default `
   }
 
   h1 {
-    font-size: ${font.size.xl}
+    font-size: ${font.size.xl};
   }
 
   h2 {
-    font-size: ${font.size.lg}
+    font-size: ${font.size.lg};
   }
 
   a {
-    color: ${color.link}
+    color: ${color.link};
   }
 `
