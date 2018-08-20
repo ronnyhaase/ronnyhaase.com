@@ -8,7 +8,8 @@ const Footer = ({ theme }) => (
   <Box bg={theme.color.text} color={theme.color.background} fontSize={theme.font.size.sm} py="1rem">
     <Container>
       <p>
-        Copyright &copy; Ronny Haase, 2011 - 2018
+        Copyright &copy; Ronny Haase, 2011 - 2018<br />
+        <small>The <a href="https://github.com/ronnyhaase/ronnyhaase.com">code of this website</a> is open source under GPLv3</small>
       </p>
       <p>
         <p><a href="#">Back to Top</a></p>

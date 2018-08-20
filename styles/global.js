@@ -38,4 +38,8 @@ export default `
     color: ${color.link};
     text-decoration: none;
   }
+
+  small {
+    0.875em
+  }
 `
