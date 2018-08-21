@@ -1,6 +1,3 @@
-/**
- * Provides styled-components utilities for CSS animation properties
- */
 import { style, compose } from 'styled-system'
 
 const animation = style({

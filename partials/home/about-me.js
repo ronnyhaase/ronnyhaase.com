@@ -1,8 +1,7 @@
-import { Box } from 'grid-styled'
 import React from 'react'
 import { FileText } from 'react-feather'
 
-import { Button, Container, Headline, Text } from '../../components'
+import { Box, Button, Container, Headline, Text } from '../../components'
 import { color, font } from '../../styles/variables'
 
 const AboutMe = () => (

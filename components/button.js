@@ -16,7 +16,7 @@ Button.defaultProps = {
   is: 'button'
 }
 
-const IconButton = styled(Button)`
+const IconButton = styled(({ outlined, ...rest }) => (<Button {...rest} />))`
   padding: ${({ theme }) => theme.space.md};
   border: 3px solid ${({ theme }) => theme.color.background};
   border-radius: ${({ theme }) => theme.borderRadius.round};

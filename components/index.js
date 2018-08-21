@@ -1,4 +1,5 @@
 export { default as Animation } from './animation'
+export { default as Box } from './box'
 export { Col, Container, Row } from './grid'
 export { default as Headline } from './headline'
 export { Button, IconButton, IconButtonLink, OutlinedButton } from './button'

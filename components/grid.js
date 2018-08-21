@@ -1,8 +1,9 @@
-import { Box, Flex } from 'grid-styled'
+import { Flex } from 'grid-styled'
 import styled from 'styled-components'
 import { maxWidth } from 'styled-system'
 
 import { containerMaxWidths } from '../styles/variables'
+import { Box } from './'
 
 const Col = styled(Box)`
   flex: 1 1 auto;

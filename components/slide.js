@@ -1,5 +1,6 @@
-import { Box } from 'grid-styled'
 import styled from '../node_modules/styled-components'
+
+import { Box } from '.'
 
 const Slide = styled(Box)`
   position: relative;

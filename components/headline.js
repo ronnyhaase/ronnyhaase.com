@@ -1,15 +1,12 @@
-import tag from 'clean-tag'
+import React from 'react'
 import styled from 'styled-components'
-import { space, textAlign, fontWeight } from 'styled-system'
+import { space } from 'styled-system'
 
-import { textShadow } from '../styles/utils/text'
+import Text from './text'
 
-const Headline = styled(tag)`
+const Headline = styled(({ serif, ...rest }) => (<Text {...rest} />))`
   ${({ serif, theme }) => serif ? `font-family: ${theme.font.family.serif};` : ''}
-  ${fontWeight}
   ${space}
-  ${textAlign}
-  ${textShadow}
 `
 
 export default Headline

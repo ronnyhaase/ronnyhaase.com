@@ -23,5 +23,9 @@ const SROnly = styled(tag)`
     }
   ` : ''}
 `
+SROnly.defaultProps = {
+  blacklist: ['focusable'],
+  focusable: true
+}
 
 export default SROnly

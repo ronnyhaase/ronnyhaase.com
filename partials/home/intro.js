@@ -2,9 +2,8 @@ import jump from 'jump.js'
 import React from 'react'
 import { ArrowDown, Github, Linkedin, Mail, Twitter } from 'react-feather'
 import Particles from 'react-particles-js'
-import { Box } from 'grid-styled'
 
-import { Container, Headline, IconButtonLink, IconButton, Image, SROnly, Slide } from '../../components'
+import { Box, Container, Headline, IconButtonLink, IconButton, Image, SROnly, Slide } from '../../components'
 import { FadeInBottom, FadeInLeft, FadeInRight, FadeIn, ZoomIn } from '../../components/animations'
 import particlesConfig from '../../styles/particles-config'
 
@@ -53,7 +52,7 @@ const Intro = () => (
             outlined
           >
             <Github size={28} />
-            <SROnly focusable>Link to Github profile</SROnly>
+            <SROnly>Link to Github profile</SROnly>
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
@@ -64,7 +63,7 @@ const Intro = () => (
             outlined
           >
             <Linkedin size={28} />
-            <SROnly focusable>Link to LinkedIn profile</SROnly>
+            <SROnly>Link to LinkedIn profile</SROnly>
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
@@ -75,7 +74,7 @@ const Intro = () => (
             outlined
           >
             <Twitter size={28} />
-            <SROnly focusable>Link to Twitter profile</SROnly>
+            <SROnly>Link to Twitter profile</SROnly>
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
@@ -86,7 +85,7 @@ const Intro = () => (
             outlined
           >
             <Mail size={28} />
-            <SROnly focusable>Write me an e-mail</SROnly>
+            <SROnly>Write me an e-mail</SROnly>
           </ZoomIn>
         </center>
       </div>

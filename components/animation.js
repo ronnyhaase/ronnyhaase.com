@@ -9,5 +9,19 @@ const Animation = styled(tag)`
   ${boxShadow}
   ${space}
 `
+Animation.defaultProps = {
+  blacklist: [
+    'animation',
+    'animationDelay',
+    'animationDirection',
+    'animationDuration',
+    'animationFillMode',
+    'animationIterationCount',
+    'animationName',
+    'animationPlayState',
+    'animationTimingFunction',
+    'animations'
+  ]
+}
 
 export default Animation

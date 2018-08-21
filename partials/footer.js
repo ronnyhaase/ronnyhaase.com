@@ -1,8 +1,7 @@
 import React from 'react'
-import { Box } from 'grid-styled'
 import { withTheme } from 'styled-components'
 
-import { Container, Text } from '../components'
+import { Box, Container, Text } from '../components'
 
 const Footer = ({ theme }) => (
   <Box bg={theme.color.text} color={theme.color.background} fontSize={theme.font.size.sm} py="1rem">
