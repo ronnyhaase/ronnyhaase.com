@@ -1,7 +1,7 @@
 import React from 'react'
 import { FileText } from 'react-feather'
 
-import { Box, Button, Container, Headline, Text } from '../../components'
+import { Box, Container, Headline, Text, OutlinedButton } from '../../components'
 import { color, font } from '../../styles/variables'
 
 const AboutMe = () => (
@@ -15,10 +15,10 @@ const AboutMe = () => (
     </Box>
     <Container py="1rem">
       <center>
-        <Button is="a" href="/static/cv-ronnyhaase.pdf" boxShadow="2px 2px 6px rgba(0,0,0,.5)" >
+        <OutlinedButton is="a" href="/static/cv-ronnyhaase.pdf">
           <FileText />
           <span>Download my CV (PDF)</span>
-        </Button>
+        </OutlinedButton>
       </center>
       <Text fontFamily={font.family.sans}>
         <p>Hi! I am Ronny.</p>

@@ -6,9 +6,9 @@ const Button = styled(tag)`
   display: inline-flex;
   align-items: center;
   padding: ${({ theme }) => `${theme.space.sm} ${theme.space.xl}`};
-  border: 2px solid ${({ theme }) => theme.color.primary};
+  border: 2px solid ${({ theme }) => theme.color.text};
   border-radius: ${({ theme }) => theme.borderRadius.max};
-  background: ${({ theme }) => theme.color.primary};
+  background: ${({ theme }) => theme.color.text};
   color: ${({ theme }) => theme.color.background};
   ${boxShadow}
 `
@@ -32,7 +32,7 @@ IconButtonLink.defaultProps = {
 }
 
 const OutlinedButton = styled(Button)`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.text};
   background: transparent;
 `
 

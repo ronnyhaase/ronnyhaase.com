@@ -1,6 +1,3 @@
-/**
- * https://coolors.co/67afb7-ef8275-5b4b49-94bc7d-544e61
- */
 const breakpoints = ['576px', '768px', '992px', '1200px']
 
 const borderRadius = {
