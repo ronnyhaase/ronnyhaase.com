@@ -98,7 +98,7 @@ const Intro = () => (
             animationDuration="500ms"
             aria-label="Scroll to further content"
             boxShadow="1px 1px 6px rgba(0,0,0,.5)"
-            p="8px !important"
+            p=".5rem !important"
             onClick={() => jump('#about-me')}
           >
             <ArrowDown size={22} />

@@ -20,6 +20,15 @@ export default `
     line-height: 1.75;
   }
 
+  a {
+    color: ${color.link};
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 1em 0;
@@ -32,11 +41,6 @@ export default `
 
   h2 {
     font-size: ${font.size.lg};
-  }
-
-  a {
-    color: ${color.link};
-    text-decoration: none;
   }
 
   small {

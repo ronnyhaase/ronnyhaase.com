@@ -4,13 +4,15 @@
 const breakpoints = ['576px', '768px', '992px', '1200px']
 
 const borderRadius = {
-  max: '32767px'
+  max: '32767px',
+  round: '100%'
 }
 
 const color = {
   background: '#ffffff',
   backgroundDarker: '#f0f7fb',
   link: '#a7c894',
+  primary: '#a7c894',
   text: '#333'
 }
 
@@ -48,7 +50,13 @@ const font = {
 
 const gutterWidth = 30
 
-const space = {}
+const space = {
+  xs: '.25rem',
+  sm: '.5rem',
+  md: '1rem',
+  lg: '1.5rem',
+  xl: '2rem'
+}
 
 export {
   breakpoints,
