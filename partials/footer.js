@@ -9,7 +9,7 @@ const Footer = ({ theme }) => (
     <Container>
       <p>
         Copyright &copy; Ronny Haase, 2011 - 2018<br />
-        <small>The <a href="https://github.com/ronnyhaase/ronnyhaase.com">code of this website</a> is open source under GPLv3</small>
+        <small>The <a href="https://github.com/ronnyhaase/ronnyhaase.com">code of this website</a> is open source under <a href="https://opensource.org/licenses/GPL-3.0">GPL v3</a></small>
       </p>
       <p>
         <p><a href="#">Back to Top</a></p>
