@@ -1,5 +1,4 @@
 import tag from 'clean-tag'
-import React from 'react'
 import styled from 'styled-components'
 import { boxShadow } from 'styled-system'
 
@@ -15,9 +14,11 @@ IconButton.defaultProps = {
   is: 'button'
 }
 
-const IconButtonLinkWrapper = styled(IconButton)`
+const IconButtonLink = styled(IconButton)`
   color: #fff;
 `
-const IconButtonLink = (props) => (<IconButtonLinkWrapper is="a" {...props} />)
+IconButtonLink.defaultProps = {
+  is: 'a'
+}
 
 export { IconButton, IconButtonLink }
