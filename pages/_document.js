@@ -23,14 +23,12 @@ export default class MyDocument extends Document {
           <title>Ronny Haase</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover" />
           <meta name="theme-color" content="#000000" />
+          <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans" rel="stylesheet" />
           {this.props.styleTags}
         </Head>
         <body>
           <Main />
           <NextScript />
-          <style>
-            @import url(https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans)
-          </style>
           <script dangerouslySetInnerHTML={{ __html: `
             ${this.props.doNotTrack ? "window['ga-disable-UA-24905421-1'] = true;" : ''}
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
