@@ -9,7 +9,7 @@ import particlesConfig from '../../styles/particles-config'
 
 const Intro = () => (
   <Slide bg="#67afb7" color="#ffffff">
-    <FadeIn animationDuration="2s">
+    <div>
       <Particles params={particlesConfig} style={{
         position: 'absolute',
         top: 0,
@@ -17,19 +17,19 @@ const Intro = () => (
         bottom: 0,
         right: 0
       }} />
-    </FadeIn>
+    </div>
     <Container>
-      <FadeInLeft animationDelay="1s" animationDuration="1.5s">
+      <FadeInLeft animationDelay="0s" animationDuration="1.5s">
         <Headline is="h1" p={['1rem 0 0 0', '1em 0 0 0']} textAlign="center" textShadow="1px 1px 6px rgba(0,0,0,.5)">
           Ronny Haase
         </Headline>
       </FadeInLeft>
-      <FadeInRight animationDelay="1s" animationDuration="1.5s">
+      <FadeInRight animationDelay=".0s" animationDuration="1.5s">
         <Headline is="h2" p={['1rem 0 1rem 0', '1em 0 0.5em 0']} textAlign="center" textShadow="1px 1px 6px rgba(0,0,0,.5)">
           Software Engineer &amp; -Architect
         </Headline>
       </FadeInRight>
-      <FadeInBottom animationDelay="1s" animationDuration="1.5s" py={['0.25rem', '1rem']}>
+      <FadeInBottom animationDelay="0s" animationDuration="1.5s" py={['0.25rem', '1rem']}>
         <center>
           <Image
             alt="Ronny Haase (Photo)"
@@ -45,7 +45,7 @@ const Intro = () => (
         <center>
           <ZoomIn
             is={IconButtonLink}
-            animationDelay="1250ms"
+            animationDelay="250ms"
             animationDuration="750ms"
             href="https://github.com/ronnyhaase"
             mx="3px"
@@ -56,7 +56,7 @@ const Intro = () => (
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
-            animationDelay="1500ms"
+            animationDelay="500ms"
             animationDuration="750ms"
             href="https://linkedin.com/in/ronnyhaase"
             mx="3px"
@@ -67,7 +67,7 @@ const Intro = () => (
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
-            animationDelay="1750ms"
+            animationDelay="750ms"
             animationDuration="750ms"
             href="https://twitter.com/ronnyhaase"
             mx="3px"
@@ -78,7 +78,7 @@ const Intro = () => (
           </ZoomIn>
           <ZoomIn
             is={IconButtonLink}
-            animationDelay="2000ms"
+            animationDelay="1000ms"
             animationDuration="750ms"
             href="mailto:ronhaase@gmail.com"
             mx="3px"
@@ -93,7 +93,7 @@ const Intro = () => (
         <center>
           <FadeIn
             is={IconButton}
-            animationDelay="2500ms"
+            animationDelay="1500ms"
             animationDuration="500ms"
             aria-label="Scroll to further content"
             boxShadow="1px 1px 6px rgba(0,0,0,.5)"
