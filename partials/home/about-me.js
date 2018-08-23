@@ -15,7 +15,7 @@ const AboutMe = () => (
     </Box>
     <Container py="1rem">
       <center>
-        <OutlinedButton is="a" href="/static/cv-ronnyhaase.pdf">
+        <OutlinedButton is="a" href="/static/CV-ronnyhaase.pdf">
           <FileText />
           <span>Download my CV (PDF)</span>
         </OutlinedButton>
