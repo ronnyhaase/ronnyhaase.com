@@ -1,6 +1,6 @@
 import jump from 'jump.js'
 import React from 'react'
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from 'react-feather'
+import { ArrowDown, GitHub, Linkedin, Mail, Twitter } from 'react-feather'
 import Particles from 'react-particles-js'
 
 import { Box, Container, Headline, IconButtonLink, IconButton, Image, SROnly, Slide } from '../../components'
@@ -51,7 +51,7 @@ const Intro = () => (
             mx="3px"
             outlined
           >
-            <Github size={28} />
+            <GitHub size={28} />
             <SROnly>Link to Github profile</SROnly>
           </ZoomIn>
           <ZoomIn
