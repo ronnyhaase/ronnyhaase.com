@@ -1,4 +1,5 @@
 import App, { Container } from 'next/app'
+import Head from 'next/head'
 import React, { Fragment } from 'react'
 import { ThemeProvider } from 'styled-components'
 
@@ -22,6 +23,9 @@ export default class MyApp extends App {
       <Container>
         <ThemeProvider theme={theme}>
           <Fragment>
+            <Head>
+              <title>Ronny Haase &bull; FullStack / Frontend Software Engineer &amp; -Architect</title>
+            </Head>
             <Component {...pageProps} />
             <Footer />
           </Fragment>
