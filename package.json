@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
-    "dev": "next",
+    "dev": "node server.js",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "author": "Ronny Haase <ronnyhaase@fastmail.com>",
   "license": "GPL-3.0-or-later",
