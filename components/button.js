@@ -1,4 +1,5 @@
 import tag from 'clean-tag'
+import React from 'react'
 import styled from 'styled-components'
 import { boxShadow } from 'styled-system'
 
