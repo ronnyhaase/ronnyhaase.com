@@ -1,10 +1,11 @@
 import App, { Container } from 'next/app'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import React, { Fragment } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import * as theme from '../styles/variables'
-import Footer from '../partials/footer'
+const Footer = dynamic(() => import('../partials/footer'))
 
 export default class MyApp extends App {
   static async getInitialProps ({ Component, router, ctx }) {

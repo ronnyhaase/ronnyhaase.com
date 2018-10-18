@@ -1,7 +1,9 @@
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import React, { Fragment } from 'react'
 
-import { Intro, AboutMe } from '../partials/home'
+const Intro = dynamic(() => import('../partials/home/intro'))
+const AboutMe = dynamic(() => import('../partials/home/about-me'))
 
 const HomePage = () => (
   <Fragment>
