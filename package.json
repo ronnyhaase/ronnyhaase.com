@@ -12,25 +12,26 @@
   "author": "Ronny Haase <ronnyhaase@fastmail.com>",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "clean-tag": "^2.0.0",
+    "clean-tag": "^2.0.2",
     "grid-styled": "^5.0.2",
     "jump.js": "^1.0.2",
     "next": "^7.0.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
     "react-feather": "^1.1.4",
     "styled-components": "^3.4.10",
     "styled-system": "^3.1.11"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-plugin-styled-components": "^1.8.0",
-    "eslint": "^5.7.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-config-standard-react": "^6.0.0",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^4.0.0"
   }
 }

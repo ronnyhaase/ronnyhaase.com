@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
             });
             ga('set', 'anonymizeIp', true);
             ga('send', 'pageview');
-          `}} />
+          ` }} />
           <script async src="https://www.google-analytics.com/analytics.js" />
         </body>
       </html>

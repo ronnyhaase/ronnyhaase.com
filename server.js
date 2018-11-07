@@ -1,4 +1,6 @@
 const { createServer } = require('http')
+// Next doesn't support URL, yet
+// eslint-disable-next-line node/no-deprecated-api
 const { parse } = require('url')
 const next = require('next')
 
