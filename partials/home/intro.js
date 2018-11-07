@@ -1,23 +1,12 @@
 import jump from 'jump.js'
 import React from 'react'
 import { ArrowDown, GitHub, Linkedin, Mail, Twitter } from 'react-feather'
-import Particles from 'react-particles-js'
 
 import { Box, Container, Headline, IconButtonLink, IconButton, Image, SROnly, Slide } from '../../components'
 import { FadeInBottom, FadeInLeft, FadeInRight, FadeIn, ZoomIn } from '../../components/animations'
-import particlesConfig from '../../styles/particles-config'
 
 const Intro = () => (
   <Slide bg="#67afb7" color="#ffffff">
-    <div>
-      <Particles params={particlesConfig} style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0
-      }} />
-    </div>
     <Container>
       <FadeInLeft animationDelay="0s" animationDuration="1.5s">
         <Headline is="h1" p={['1rem 0 0 0', '1em 0 0 0']} textAlign="center" textShadow="1px 1px 6px rgba(0,0,0,.5)">

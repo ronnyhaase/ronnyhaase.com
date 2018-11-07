@@ -7,7 +7,7 @@ const borderRadius = {
 
 const color = {
   background: '#ffffff',
-  backgroundDarker: '#f0f7fb',
+  backgroundDarker: '#f6f6f9',
   link: '#a7c894',
   primary: '#a7c894',
   text: '#333'
