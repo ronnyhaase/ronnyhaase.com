@@ -7,7 +7,7 @@ const Text = styled(tag)`
   ${type}
 `
 Text.defaultProps = {
-  blacklist: ['textAlign', 'textShadow']
+  blacklist: ['fontFamily', 'fontSize', 'fontWeight', 'p', 'pb', 'textAlign', 'textShadow']
 }
 
 export default Text

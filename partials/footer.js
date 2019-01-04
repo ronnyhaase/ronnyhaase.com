@@ -10,7 +10,7 @@ const Footer = ({ theme }) => (
         Copyright &copy; Ronny Haase, 2011 - 2018<br />
         <small>The <a href="https://github.com/ronnyhaase/ronnyhaase.com">code of this website</a> is open source under <a href="https://opensource.org/licenses/GPL-3.0">GPL v3</a></small>
       </p>
-      <p pb=".5rem"><a href="#">Back to Top</a></p>
+      <p><a href="#">Back to Top</a></p>
       <p>
         <a href="https://github.com/ronnyhaase">GitHub</a>&nbsp;&bull;&nbsp;
         <a href="https://linkedin.com/in/ronnyhaase">LinkedIn</a>&nbsp;&bull;&nbsp;
