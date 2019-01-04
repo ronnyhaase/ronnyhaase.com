@@ -1,9 +1,40 @@
-import { Box as OriginalBox } from 'grid-styled'
 import styled from 'styled-components'
+import {
+  alignItems,
+  alignSelf,
+  color,
+  flex,
+  flexDirection,
+  flexWrap,
+  fontSize,
+  justifyContent,
+  order,
+  space,
+  width
+} from 'styled-system'
+import tag from 'clean-tag'
 
-const Box = styled(OriginalBox)``
+const Box = styled(tag)`
+  ${alignItems}
+  ${alignSelf}
+  ${color}
+  ${flex}
+  ${flexDirection}
+  ${flexWrap}
+  ${fontSize}
+  ${justifyContent}
+  ${order}
+  ${space}
+  ${width}
+`
 Box.defaultProps = {
-  blacklist: ['maxWidth']
+  blacklist: [
+    'bg',
+    'color',
+    'fontSize',
+    'maxWidth',
+    'py'
+  ]
 }
 
 export default Box
