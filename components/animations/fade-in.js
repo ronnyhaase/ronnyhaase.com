@@ -14,10 +14,9 @@ const fadeIn = keyframes`
   }
 `
 
-const FadeIn = styled(Animation).attrs({
-  animationName: fadeIn,
-  animationFillMode: 'forwards'
-})`
+const FadeIn = styled(Animation)`
+  animation-name: ${fadeIn};
+  animation-fill-mode: forwards;
   opacity: 0;
 `
 

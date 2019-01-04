@@ -1,10 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import React from 'react'
-import { ServerStyleSheet, injectGlobal } from 'styled-components'
-
-import globalStyles from '../styles/global'
-
-injectGlobal`${globalStyles}`
+import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage, req }) {

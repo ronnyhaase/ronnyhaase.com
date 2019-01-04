@@ -16,10 +16,9 @@ const fadeInBottom = keyframes`
   }
 `
 
-const FadeInBottom = styled(Animation).attrs({
-  animationName: fadeInBottom,
-  animationFillMode: 'forwards'
-})`
+const FadeInBottom = styled(Animation)`
+  animation-name: ${fadeInBottom};
+  animation-fill-mode: forwards;
   opacity: 0;
 `
 
