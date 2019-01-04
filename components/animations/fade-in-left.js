@@ -16,10 +16,9 @@ const fadeInLeft = keyframes`
   }
 `
 
-const FadeInLeft = styled(Animation).attrs({
-  animationName: fadeInLeft,
-  animationFillMode: 'forwards'
-})`
+const FadeInLeft = styled(Animation)`
+  animation-name: ${fadeInLeft};
+  animation-fill-mode: forwards;
   opacity: 0;
 `
 

@@ -16,10 +16,9 @@ const zoomIn = keyframes`
   }
 `
 
-const ZoomIn = styled(Animation).attrs({
-  animationName: zoomIn,
-  animationFillMode: 'forwards'
-})`
+const ZoomIn = styled(Animation)`
+  animation-name: ${zoomIn};
+  animation-fill-mode: forwards;
   opacity: 0;
 `
 

@@ -1,6 +1,8 @@
+import { createGlobalStyle } from 'styled-components'
+
 import { font, color } from './variables'
 
-export default `
+const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: ${font.size.base}px;
@@ -44,6 +46,8 @@ export default `
   }
 
   small {
-    0.875em
+    font-size: 0.875em;
   }
 `
+
+export default GlobalStyles
