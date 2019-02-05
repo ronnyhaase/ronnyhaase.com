@@ -19,7 +19,7 @@ const _fontFamilySystem = '-apple-system, BlinkMacSystemFont, "Segoe UI", ' +
   'Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", ' +
   '"Segoe UI Emoji", "Segoe UI Symbol"'
 const _fontFamilySans = 'Open Sans'
-const _fontFamilySerif = 'Merriweather'
+const _fontFamilySerif = 'serif'
 
 const font = {
   family: {

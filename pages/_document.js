@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover" />
           <meta name="theme-color" content="#000000" />
-          <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
           {this.props.styleTags}
         </Head>
         <body>
