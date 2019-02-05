@@ -8,7 +8,7 @@ const AboutMe = () => (
   <div id="about-me">
     <Box bg={color.backgroundDarker}>
       <Container>
-        <Headline is="h2" fontWeight="300" textAlign="center" serif>
+        <Headline is="h2" fontWeight="400" textAlign="center">
           About me
         </Headline>
       </Container>
