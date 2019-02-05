@@ -7,7 +7,7 @@ const Footer = ({ theme }) => (
   <Box bg={theme.color.text} color={theme.color.background} fontSize={theme.font.size.sm} py="1rem">
     <Container>
       <p>
-        Copyright &copy; Ronny Haase, 2011 - 2018<br />
+        Copyright &copy; Ronny Haase, 2011 - 2019<br />
         <small>The <a href="https://github.com/ronnyhaase/ronnyhaase.com">code of this website</a> is open source under <a href="https://opensource.org/licenses/GPL-3.0">GPL v3</a></small>
       </p>
       <p pb=".5rem"><a href="#">Back to Top</a></p>
