@@ -6,8 +6,8 @@ import { Intro, AboutMe } from '../partials/home'
 const HomePage = () => (
   <Fragment>
     <Head>
-      <title>Ronny Haase &bull; Frontend / Full-Stack Software Engineer &amp; Software Architect</title>
-      <meta name="description" content="Frontend / Full-Stack Software Engineer and Software Architect, offering 10+ years building and designing systems at high-scale, proficient in JavaScript, ReactJS, NodeJS and Microservices." />
+      <title>Ronny Haase &bull; Lead Frontend / Full-Stack Software Engineer &amp; Software Architect</title>
+      <meta name="description" content="Lead Frontend / Full-Stack Software-Engineer &amp; -Architect. Designing and building reliable, maintainable &amp; highly-scalable software and leading teams to do the same." />
     </Head>
     <Intro />
     <AboutMe />
