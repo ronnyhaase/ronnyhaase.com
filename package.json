@@ -1,0 +1,30 @@
+{
+  "name": "ronnyhaase.com",
+  "version": "3.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build/css; node build/html; node build/static",
+    "dev": "concurrently \"npm run serve\" \"npm run watch\"",
+    "serve": "lite-server --baseDir=dist",
+    "watch": "concurrently \"npm run watch:css\" \"npm run watch:html\" \"npm run watch:static\"",
+    "watch:css": "chokidar \"styles/**/*.scss\" -c \"node build/css\"",
+    "watch:html": "chokidar \"templates/**/*.pug\" -c \"node build/html\"",
+    "watch:static": "chokidar \"static/**/*\" -c \"node build/static\""
+  },
+  "author": "Ronny Haase <ronnyhaase@fastmail.com>",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "chokidar-cli": "^2.0.0",
+    "concurrently": "^4.1.2",
+    "cssnano": "^4.1.10",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.12.0",
+    "postcss": "^7.0.17",
+    "pug": "^2.0.4"
+  },
+  "dependencies": {}
+}

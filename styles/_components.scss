@@ -1,0 +1,148 @@
+.Footer {
+  padding: 1rem 0;
+  background-color: $c-fg;
+  color: $c-bg;
+}
+
+.Icon {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.ResponsiveImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.Slide {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.Slide-ScrollArea {
+  margin: 1.5rem 0;
+  @media (min-height: 560px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.SubTitle {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 6px;
+
+  @media (max-width: 350px) {
+    font-size: 1.25rem;
+  }
+}
+
+.Title {
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 6px;
+}
+
+.TitleImage {
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 12px rgba(0,0,0,.5);
+}
+
+/* Buttons
+   ========================================================================== */
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  border: 3px solid $c-brand;
+  border-radius: 32000px;
+  background-color: $c-brand;
+  color: $c-bg;
+  line-height: 1;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.OutlineButton {
+  @extend .Button;
+  background-color: transparent;
+  color: $c-brand;
+}
+
+.IconButton {
+  @extend .Button;
+  margin: 0 .25rem;
+  padding: 1rem;
+  border-color: #fff;
+  border-radius: 100%;
+  background-color: $c-bg;
+  color: $c-fg;
+
+  @media (max-width: 325px) {
+    padding: 0.875rem;
+  }
+}
+
+.OutlineIconButton {
+  @extend .IconButton;
+  background-color: transparent;
+  color: $c-bg;
+}
+
+/* Animations
+   ========================================================================== */
+
+.Animation {
+  animation-play-state: paused;
+
+  &.running {
+    animation-play-state: running;
+  }
+}
+
+.FadeIn {
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.FadeInBottom {
+  animation-name: fadeInBottom;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.FadeInLeft {
+  animation-name: fadeInLeft;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.FadeInRight {
+  animation-name: fadeInRight;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.ZoomIn {
+  animation-name: zoomIn;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}

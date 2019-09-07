@@ -1,0 +1,58 @@
+section#intro.Slide(style="background-color: #3c7f86; color: #fff")
+  div.container
+    h1.Title.Animation.FadeInLeft(
+      style="animation-delay: 0s; animation-duration: 1.5s;"
+    ) Ronny Haase
+    h2.SubTitle.Animation.FadeInRight(
+      style="animation-delay: 0s; animation-duration: 1.5s;"
+    ) Software Engineer &amp; -Architect
+    center
+      img.TitleImage.ResponsiveImage.Animation.FadeInBottom(
+        alt="Photo of Ronny Haase"
+        src="static/ronnyhaase-square.jpg"
+        style="animation-delay: 0s; animation-duration: 1.5s;"
+      )
+    div
+      center(style="margin: 1rem 0;")
+        a.OutlineIconButton.Animation.ZoomIn(
+          aria-label="Visit GitHub profile"
+          href="https://github.com/ronnyhaase"
+          style="animation-delay: 250ms; animation-duration: 750ms;"
+        )
+          svg.Icon(role="img", aria-labelledby="icon-title-github")
+            title#icon-title-github Github icon
+            use(xlink:href="static/feather-sprite.svg#github")
+        a.OutlineIconButton.Animation.ZoomIn(
+          aria-label="Visit LinkedIn profile"
+          href="https://linkedin.com/in/ronnyhaase"
+          style="animation-delay: 500ms; animation-duration: 750ms;"
+        )
+          svg.Icon(role="img", aria-labelledby="icon-title-linkedin")
+            title#icon-title-linkedin LinkedIn icon
+            use(xlink:href="static/feather-sprite.svg#linkedin")
+        a.OutlineIconButton.Animation.ZoomIn(
+          aria-label="Visit Twitter profile"
+          href="https://twitter.com/ronnyhaase"
+          style="animation-delay: 750ms; animation-duration: 750ms;"
+        )
+          svg.Icon(role="img", aria-labelledby="icon-title-twitter")
+            title#icon-title-twitter Twitter icon
+            use(xlink:href="static/feather-sprite.svg#twitter")
+        a.OutlineIconButton.Animation.ZoomIn(
+          aria-label="Send e-mail"
+          href="mailto:ronhaase@gmail.com"
+          style="animation-delay: 1000ms; animation-duration: 750ms;"
+        )
+          svg.Icon(role="img", aria-labelledby="icon-title-mail")
+            title#icon-title-mail Mail icon
+            use(xlink:href="static/feather-sprite.svg#mail")
+    div
+      center.Slide-ScrollArea
+        a.IconButton.Animation.FadeIn(
+          aria-label="Skip to main content"
+          href="#main-content"
+          style="animation-delay: 1500ms; animation-duration: 500ms; box-shadow: 1px 1px 6px rgba(0,0,0,.5); padding: .5rem;"
+        )
+          svg.Icon(role="img", aria-labelledby="icon-title-arrowdown", style="width: 22px; height: 22px;")
+            title#icon-title-arrowdown Arrow down icon
+            use(xlink:href="static/feather-sprite.svg#arrow-down")
