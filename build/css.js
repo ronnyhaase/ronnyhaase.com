@@ -1,43 +1,36 @@
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
 const fs = require('fs-extra')
 const glob = require('glob')
 const sass = require('node-sass')
+const path = require('path')
 const postcss = require('postcss')
-const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
 
-// WIP
 const defaultOptions = {
-  cwd: process.cwd(),
-  glob: '**/!(_)*.scss',
-  inDir: 'styles',
-  outDir: 'dist',
+  pattern: '**/!(_)*.s[a|c]ss',
+  inDir: 'styles/',
+  outDir: 'dist/',
 }
 
 const options = { ...defaultOptions }
 
-async function compileScssFile (path) {
-  const outDir = `${options.cwd}/${options.outDir}`
-  const filename = path.basename(path)
-  const fullPath = `${outDir}/${filename}`
+void async function () {
+  const { pattern, inDir, outDir } = options
 
-  fs.ensureDirSync(dir)
+  const files = glob.sync(`${inDir}${pattern}`)
 
-  const { css } = sass.renderSync({ file: process.cwd() + '/styles/index.scss' })
-  const { css: ocss, map } = await postcss([autoprefixer, cssnano]).process(css, { from: undefined })
-  fs.writeFileSync(process.cwd() + '/dist/styles.css', ocss)
-  if (map) fs.writeFileSync(process.cwd() + '/dist/styles.css.map', map)
-}
+  files.forEach(async file => {
+    const cssFn = file
+      .replace(inDir, outDir)
+      .replace(/\.s(a|c)ss/, '.css')
+    const mapFn = cssFn + '.map'
 
-function findFiles () {
-  return glob.sync(`${cwd}/${inDir}/${glob}`)
-}
-// /WIP
+    const { css } = sass.renderSync({ file })
+    const { css: ocss, map } = await postcss([autoprefixer, cssnano])
+      .process(css, { from: undefined })
 
-;(async function compileScss () {
-  fs.ensureDirSync(process.cwd() + '/dist')
-
-  const { css } = sass.renderSync({ file: process.cwd() + '/styles/index.scss' })
-  const { css: ocss, map } = await postcss([autoprefixer, cssnano]).process(css, { from: undefined })
-  fs.writeFileSync(process.cwd() + '/dist/styles.css', ocss)
-  if (map) fs.writeFileSync(process.cwd() + '/dist/styles.css.map', map)
-})()
+    fs.ensureDirSync(path.dirname(cssFn))
+    fs.writeFileSync(cssFn, ocss)
+    if (map) fs.writeFileSync(mapFn, map)
+  })
+}()
