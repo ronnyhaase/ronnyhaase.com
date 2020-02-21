@@ -1,0 +1,16 @@
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: $c-fg !important;
+    color: $c-bg !important;
+  }
+  .c-fg-bright {
+    color: #999;
+  }
+  .Footer {
+    background-color: #262626;
+  }
+  .Tag {
+    background-color: #262626;
+    color: $c-bg;
+  }
+}
