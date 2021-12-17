@@ -1,30 +1,17 @@
 {
   "name": "ronnyhaase.com",
   "version": "3.2.4",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "node scripts/css; node scripts/html; node scripts/static",
-    "dev": "concurrently \"npm run serve\" \"npm run watch\"",
-    "serve": "lite-server --baseDir=dist",
-    "watch": "concurrently \"npm run watch:css\" \"npm run watch:html\" \"npm run watch:static\"",
-    "watch:css": "chokidar \"styles/**/*.scss\" -c \"node scripts/css\"",
-    "watch:html": "chokidar \"templates/**/*.pug\" -c \"node scripts/html\"",
-    "watch:static": "chokidar \"static/**/*\" -c \"node scripts/static\""
-  },
   "author": "Ronny Haase <ronnyhaase@fastmail.com>",
+  "description": "",
   "license": "GPL-3.0-or-later",
-  "devDependencies": {
-    "autoprefixer": "^10.2.4",
-    "chokidar-cli": "^2.1.0",
-    "concurrently": "^6.0.0",
-    "cssnano": "^4.1.10",
-    "fs-extra": "^9.1.0",
-    "glob": "^7.1.6",
-    "lite-server": "^2.6.1",
-    "node-sass": "^5.0.0",
-    "postcss": "^8.2.6",
-    "pug": "^3.0.2"
+  "source": "src/index.pug",
+  "scripts": {
+    "build": "parcel build",
+    "dev": "parcel"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  }
 }
