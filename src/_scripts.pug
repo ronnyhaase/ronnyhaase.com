@@ -1,14 +1,7 @@
 script.
-  // GA
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-24905421-1', { storeGac: false, });
-  ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
-
   // Run animations when DOM ready
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('#intro .Animation').forEach(el => {
       el.classList.add('running')
     })
   });
-script(async=true, src="https://www.google-analytics.com/analytics.js")
