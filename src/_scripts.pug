@@ -30,6 +30,16 @@ script.
   }
   const createAnchorCallback = el => () => location.href = el.getAttribute('href')
 
+  function trackEvent(trackingData, callback) {
+    // Fallback - Plausible not guarantees callback to be called
+    setTimeout(callback, 1000)
+
+    plausible(trackingData.goal, {
+      callback,
+      props: trackingData.props,
+    })
+  }
+
   function handleTrackingClick(ev) {
     const targetEl = ev.currentTarget
     const isTargetAnchorElement = isAnchorElement(targetEl)
@@ -43,8 +53,5 @@ script.
       ev.preventDefault()
     }
 
-    plausible(trackingData.goal, {
-      callback: isTargetAnchorElement ? createAnchorCallback(targetEl) : noop,
-      props: trackingData.props,
-    })
+    trackEvent(trackingData, isTargetAnchorElement ? createAnchorCallback(targetEl) : noop)
   }
