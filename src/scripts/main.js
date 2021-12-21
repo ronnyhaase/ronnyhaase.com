@@ -15,7 +15,7 @@ function setupTracking () {
 }
 
 const noop = () => undefined
-const preventRepeatedCall = fn => {
+const preventRepeatedCall = (fn) => {
   let handled = false
   return () => {
     if (!handled) {
@@ -24,8 +24,8 @@ const preventRepeatedCall = fn => {
     }
   }
 }
-const isAnchorElement = el => el.tagName === 'A'
-const getAnalyticsData = el => {
+const isAnchorElement = (el) => el.tagName === 'A'
+const getAnalyticsData = (el) => {
   try {
     return JSON.parse(el.getAttribute('data-analytics'))
   } catch (error) {
@@ -36,7 +36,7 @@ const getAnalyticsData = el => {
     }
   }
 }
-const createAnchorCallback = el => () => location.href = el.getAttribute('href')
+const createAnchorCallback = (el) => () => location.href = el.getAttribute('href')
 
 function trackEvent(trackingData, callback) {
   const protectedCallback = preventRepeatedCall(callback)
