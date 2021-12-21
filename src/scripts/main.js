@@ -15,6 +15,15 @@ function setupTracking () {
 }
 
 const noop = () => undefined
+const preventRepeatedCall = fn => {
+  let handled = false
+  return () => {
+    if (!handled) {
+      handled = true
+      fn()
+    }
+  }
+}
 const isAnchorElement = el => el.tagName === 'A'
 const getAnalyticsData = el => {
   try {
@@ -30,11 +39,13 @@ const getAnalyticsData = el => {
 const createAnchorCallback = el => () => location.href = el.getAttribute('href')
 
 function trackEvent(trackingData, callback) {
+  const protectedCallback = preventRepeatedCall(callback)
+
   // Fallback - Plausible not guarantees callback to be called
-  setTimeout(callback, 1000)
+  setTimeout(protectedCallback, 1000)
 
   plausible(trackingData.goal, {
-    callback,
+    protectedCallback,
     props: trackingData.props,
   })
 }
