@@ -13,5 +13,8 @@
     "@parcel/transformer-pug": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "ronalize.css": "^1.2.0"
   }
 }

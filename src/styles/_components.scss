@@ -1,7 +1,6 @@
 .Footer {
   padding: 1rem 0;
-  background-color: $c-fg;
-  color: $c-bg;
+  background-color: #f3f6f9;
 }
 
 .Icon {
@@ -60,6 +59,13 @@
   border: 3px solid #fff;
   border-radius: 100%;
   box-shadow: 0 0 12px rgba(0,0,0,.5);
+}
+
+.Prose {
+  max-width: 74ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.75;
 }
 
 /* Buttons
