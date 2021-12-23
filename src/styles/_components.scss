@@ -75,9 +75,9 @@
   display: inline-flex;
   align-items: center;
   padding: .5rem 1rem;
-  border: 3px solid $c-brand;
+  border: 3px solid $c-brand-bright;
   border-radius: 32000px;
-  background-color: $c-brand;
+  background-color: $c-brand-bright;
   color: $c-bg;
   line-height: 1;
   text-decoration: none;
@@ -89,7 +89,7 @@
 .OutlineButton {
   @extend .Button;
   background-color: transparent;
-  color: $c-brand;
+  color: $c-brand-bright;
 }
 
 .IconButton {
