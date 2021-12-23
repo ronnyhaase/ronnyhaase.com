@@ -11,3 +11,8 @@ a {
     text-decoration: underline;
   }
 }
+
+*:focus {
+  outline: 2px solid #D48174;
+  outline-offset: 2px;
+}
