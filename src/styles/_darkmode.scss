@@ -3,7 +3,13 @@
     background-color: #333639;
     color: #fff;
   }
+  a {
+    color: $c-brand-bright;
+  }
   .Footer {
     background-color: #232629;
+    a {
+      color: $c-brand-bright;
+    }
   }
 }

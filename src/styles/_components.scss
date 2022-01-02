@@ -1,6 +1,9 @@
 .Footer {
   padding: 1rem 0;
   background-color: #f3f6f9;
+  a {
+    color: #3f6c9e;
+  }
 }
 
 .Icon {
@@ -75,21 +78,30 @@
   display: inline-flex;
   align-items: center;
   padding: .5rem 1rem;
-  border: 3px solid $c-brand-bright;
+  border: 3px solid $c-brand;
   border-radius: 32000px;
-  background-color: $c-brand-bright;
+  background-color: $c-brand;
   color: $c-bg;
   line-height: 1;
   text-decoration: none;
   &:hover {
     text-decoration: none;
   }
+
+  @media screen and (prefers-color-scheme: dark) {
+    border: 3px solid $c-brand-bright;
+    background-color: $c-brand-bright;
+  }
 }
 
 .OutlineButton {
   @extend .Button;
   background-color: transparent;
-  color: $c-brand-bright;
+  color: $c-brand;
+
+  @media screen and (prefers-color-scheme: dark) {
+    color: $c-brand-bright;
+  }
 }
 
 .InvertedOutlineButton {
