@@ -10,9 +10,9 @@
     "dev": "parcel"
   },
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.0.1",
-    "@parcel/transformer-sass": "^2.0.1",
-    "parcel": "^2.0.1"
+    "@parcel/transformer-pug": "^2.2.0",
+    "@parcel/transformer-sass": "^2.2.0",
+    "parcel": "^2.2.0"
   },
   "dependencies": {
     "ronalize.css": "^1.2.0"
