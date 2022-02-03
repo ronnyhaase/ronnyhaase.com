@@ -1,0 +1,24 @@
+name: on-push-run-tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  it-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps
+      - name: Run tests
+        run: npm test

@@ -7,12 +7,21 @@
   "source": "src/index.pug",
   "scripts": {
     "build": "parcel build",
-    "dev": "parcel"
+    "build-start": "npm run build && npm run start",
+    "dev": "parcel -p 3000",
+    "start": "serve dist -p 3000 --no-port-switching",
+    "test": "start-server-and-test build-start 3000 'test:run'",
+    "test:run": "playwright test",
+    "test:watch": "playwright-watch test"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.2.0",
     "@parcel/transformer-sass": "^2.2.0",
-    "parcel": "^2.2.0"
+    "@playwright/test": "^1.18.1",
+    "parcel": "^2.2.0",
+    "playwright-watch": "^1.3.23",
+    "serve": "^13.0.2",
+    "start-server-and-test": "^1.14.0"
   },
   "dependencies": {
     "ronalize.css": "^1.2.0"
