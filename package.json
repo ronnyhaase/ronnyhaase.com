@@ -15,10 +15,10 @@
     "test:watch": "playwright-watch test"
   },
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.2.0",
-    "@parcel/transformer-sass": "^2.2.0",
+    "@parcel/transformer-pug": "^2.2.1",
+    "@parcel/transformer-sass": "^2.2.1",
     "@playwright/test": "^1.18.1",
-    "parcel": "^2.2.0",
+    "parcel": "^2.2.1",
     "playwright-watch": "^1.3.23",
     "serve": "^13.0.2",
     "start-server-and-test": "^1.14.0"
