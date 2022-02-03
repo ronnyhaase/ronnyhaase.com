@@ -8,10 +8,10 @@
   "scripts": {
     "build": "parcel build",
     "build-start": "npm run build && npm run start",
-    "build-start-test": "start-server-and-test build-start 3000 test",
     "dev": "parcel -p 3000",
     "start": "serve dist -p 3000 --no-port-switching",
-    "test": "playwright test",
+    "test": "start-server-and-test build-start 3000 'test:run'",
+    "test:run": "playwright test",
     "test:watch": "playwright-watch test"
   },
   "devDependencies": {
