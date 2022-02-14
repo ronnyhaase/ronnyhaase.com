@@ -1,3 +1,15 @@
+.ContentWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.Content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
 .Footer {
   padding: 1rem 0;
   background-color: #f3f6f9;
