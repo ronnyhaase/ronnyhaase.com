@@ -1,7 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   setupTracking()
+  setupSmoothScroll()
   runAnimations()
-});
+})
+
+function setupSmoothScroll() {
+  const samePageAnchorElements = document.querySelectorAll('a[href^="#"]')
+  samePageAnchorElements.forEach(el => el.addEventListener('click', ev => {
+    ev.preventDefault()
+
+    const scrollTarget = document.querySelector(
+      ev.currentTarget.getAttribute('href')
+    )
+    const top = scrollTarget.getBoundingClientRect().top + window.scrollY
+    window.scrollTo({ top, behavior: 'smooth' })
+  }))
+}
 
 function runAnimations() {
   document.querySelectorAll('#intro .Animation').forEach(el => {
