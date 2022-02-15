@@ -1,8 +1,30 @@
+function debounce (fn, wait) {
+  let t
+  return function () {
+    clearTimeout(t)
+    t = setTimeout(() => fn.apply(this, arguments), wait)
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   setupTracking()
   setupSmoothScroll()
+  setupParallax()
   runAnimations()
 })
+
+function setupParallax () {
+  const updateParallaxEffect = () => {
+    const currentScrollY = window.scrollY
+    const maxScrollY = document.body.clientHeight
+    const relativeScrollY = 1 - (currentScrollY / maxScrollY)
+    document.getElementById('intro-content').style.transform = `scale(${relativeScrollY}, ${relativeScrollY})`
+  }
+
+  document.addEventListener('scroll', debounce(ev => {
+    updateParallaxEffect()
+  }, 1))
+}
 
 function setupSmoothScroll() {
   const samePageAnchorElements = document.querySelectorAll('a[href^="#"]')
