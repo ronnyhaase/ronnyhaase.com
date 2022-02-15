@@ -1,7 +1,10 @@
 .ContentWrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
   min-height: 100%;
+  margin-top: 100vh;
+  background-color: inherit;
 }
 
 .Content {
@@ -33,9 +36,12 @@
   height: auto;
 }
 
-.Slide {
-  position: relative;
+.Intro {
+  position: fixed;
   overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
   min-height: 100%;
 }
 

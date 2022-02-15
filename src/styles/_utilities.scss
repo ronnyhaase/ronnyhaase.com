@@ -2,9 +2,14 @@
 
 .mx-auto { margin-left: auto; margin-right: auto; }
 .my-1 { margin-top: 1rem; margin-bottom: 1rem; }
+.mt-100 { margin-top: 100%; }
+
+.z-1 { z-index: 1; }
 
 .bg-brand { background-color: $c-brand; }
 .c-brand-text { color: $c-brand-text}
+.c-text { color: #333639; }
+.bg-default { background-color: #fff; }
 
 .leading-1 { line-height: 1; }
 .leading-2 { line-height: 1.25; }
