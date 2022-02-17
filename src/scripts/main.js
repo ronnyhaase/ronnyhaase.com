@@ -18,7 +18,7 @@ function setupParallax () {
     const currentScrollY = window.scrollY
     const maxScrollY = document.body.clientHeight
     const relativeScrollY = 1 - (currentScrollY / maxScrollY)
-    document.getElementById('intro-content').style.transform = `scale(${relativeScrollY}, ${relativeScrollY})`
+    document.getElementById('intro').style.transform = `scale(${relativeScrollY}, ${relativeScrollY})`
   }
 
   document.addEventListener('scroll', debounce(ev => {
