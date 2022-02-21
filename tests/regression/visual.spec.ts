@@ -19,6 +19,9 @@ test('Visual Regressions', async ({ page, request }) => {
     { name: 'xxl', size: 1400 },
   ];
 
+  // Test tends to timeout, double allowed timeout
+  test.setTimeout(60 * 1000);
+
   await page.goto('/');
   // Wait for intro animation to finish
   await page.waitForTimeout(2000);
