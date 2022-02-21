@@ -9,7 +9,7 @@ const test = baseTest.extend<{ _autoSnapshotSuffix: void }>({
   }, { auto: true }]
 })
 
-test('Visual Regressions', async ({ page, request }) => {
+test.skip('Visual Regressions', async ({ page }) => {
   const breakpoints = [
     { name: 'xs', size: 0 },
     { name: 'sm', size: 576 },
@@ -18,9 +18,6 @@ test('Visual Regressions', async ({ page, request }) => {
     { name: 'xl', size: 1200 },
     { name: 'xxl', size: 1400 },
   ];
-
-  // Test tends to timeout, double allowed timeout
-  test.setTimeout(60 * 1000);
 
   await page.goto('/');
   // Wait for intro animation to finish
