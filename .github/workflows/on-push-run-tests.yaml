@@ -7,7 +7,7 @@ on:
     branches:
       - master
 jobs:
-  it-tests:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -22,3 +22,8 @@ jobs:
           npx playwright install --with-deps
       - name: Run tests
         run: npm test
+      - name: Archive test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-results
