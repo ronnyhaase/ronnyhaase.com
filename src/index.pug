@@ -1,11 +1,13 @@
 doctype html
 html(lang="en")
   include _head.pug
-  body#top
+  body.c-text.bg-brand
+    a#top.TopHref
     a.SkipContent.InvertedOutlineButton.VisuallyHiddenFocusable.bg-brand(href="#main-content") Skip to Content
     include _intro.pug
-    include _about.pug
-    include _footer.pug
+    div.ContentWrapper
+      include _about.pug
+      include _footer.pug
     include _scripts.pug
     a.hidden(href="static/images/ronnyhaase-preview-1200.png")
     a.hidden(href="robots.txt")

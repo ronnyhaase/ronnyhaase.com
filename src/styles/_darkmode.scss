@@ -1,11 +1,9 @@
 @media screen and (prefers-color-scheme: dark) {
-  body {
-    background-color: #333639;
-    color: #fff;
-  }
   a {
     color: $c-brand-bright;
   }
+  .c-text { color: #fff; }
+  .bg-default { background-color: #333639; }
   .Footer {
     background-color: #232629;
     a {

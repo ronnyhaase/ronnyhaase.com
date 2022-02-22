@@ -1,3 +1,18 @@
+.ContentWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  margin-top: 100vh;
+  background-color: inherit;
+}
+
+.Content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
 .Footer {
   padding: 1rem 0;
   background-color: #f3f6f9;
@@ -21,9 +36,12 @@
   height: auto;
 }
 
-.Slide {
-  position: relative;
+.Intro {
+  position: fixed;
   overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
   min-height: 100%;
 }
 
@@ -38,11 +56,15 @@
   }
 }
 
+.TopHref {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .SubTitle {
-  margin: 1rem 0;
   font-size: 1.5rem;
   font-weight: 300;
-  text-align: center;
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 6px;
 
   @media (max-width: 350px) {
@@ -51,10 +73,8 @@
 }
 
 .Title {
-  margin: 1rem 0;
   font-size: 2rem;
   font-weight: normal;
-  text-align: center;
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 6px;
 }
 

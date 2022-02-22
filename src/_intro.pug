@@ -1,60 +1,57 @@
-section#intro.Slide.bg-brand.c-brand-text
-  div.Container
-    h1.Title.Animation.FadeInLeft(
+section#intro.Intro.flex.flex-col.items-center.bg-brand.c-brand-text
+  div.Container.flex.flex-col.justify-center.items-center.grow
+    h1.Title.Animation.FadeInLeft.mb-1(
       style="animation-delay: 0s; animation-duration: 1.5s;"
     ) Ronny Haase
     h2.SubTitle.Animation.FadeInRight(
       style="animation-delay: 0s; animation-duration: 1.5s;"
     ) Software Engineer &amp; -Architect
-    center
-      img.TitleImage.ResponsiveImage.Animation.FadeInBottom(
-        alt="Photo of Ronny Haase"
-        src="static/images/ronnyhaase-square.jpg"
-        style="animation-delay: 0s; animation-duration: 1.5s;"
-        width="378"
-        height="378"
+    img.TitleImage.ResponsiveImage.Animation.FadeInBottom.my-2(
+      alt="Photo of Ronny Haase"
+      src="static/images/ronnyhaase-square.jpg"
+      style="animation-delay: 0s; animation-duration: 1.5s;"
+      width="378"
+      height="378"
+    )
+    div.text-center
+      a.OutlineIconButton.Animation.ZoomIn(
+        aria-label="Visit GitHub profile"
+        href="https://github.com/ronnyhaase"
+        style="animation-delay: 250ms; animation-duration: 750ms;"
       )
-    div
-      center.my-1
-        a.OutlineIconButton.Animation.ZoomIn(
-          aria-label="Visit GitHub profile"
-          href="https://github.com/ronnyhaase"
-          style="animation-delay: 250ms; animation-duration: 750ms;"
-        )
-          svg.Icon(role="img", aria-labelledby="icon-title-github")
-            title#icon-title-github Github icon
-            use(xlink:href="static/feather-sprite.svg#github")
-        a.OutlineIconButton.Animation.ZoomIn(
-          aria-label="Visit LinkedIn profile"
-          href="https://linkedin.com/in/ronnyhaase"
-          style="animation-delay: 500ms; animation-duration: 750ms;"
-        )
-          svg.Icon(role="img", aria-labelledby="icon-title-linkedin")
-            title#icon-title-linkedin LinkedIn icon
-            use(xlink:href="static/feather-sprite.svg#linkedin")
-        a.OutlineIconButton.Animation.ZoomIn(
-          aria-label="Visit Twitter profile"
-          href="https://twitter.com/ronnyhaase"
-          style="animation-delay: 750ms; animation-duration: 750ms;"
-        )
-          svg.Icon(role="img", aria-labelledby="icon-title-twitter")
-            title#icon-title-twitter Twitter icon
-            use(xlink:href="static/feather-sprite.svg#twitter")
-        a.OutlineIconButton.Animation.ZoomIn(
-          aria-label="Send e-mail"
-          href="mailto:ronhaase@gmail.com"
-          style="animation-delay: 1000ms; animation-duration: 750ms;"
-        )
-          svg.Icon(role="img", aria-labelledby="icon-title-mail")
-            title#icon-title-mail Mail icon
-            use(xlink:href="static/feather-sprite.svg#mail")
-    div
-      center.Slide-ScrollArea
-        a.IconButton.Animation.FadeIn(
-          aria-label="Skip to main content"
-          href="#main-content"
-          style="animation-delay: 1500ms; animation-duration: 500ms; box-shadow: 1px 1px 6px rgba(0,0,0,.5); padding: .5rem;"
-        )
-          svg.Icon(role="img", aria-labelledby="icon-title-arrowdown", style="width: 22px; height: 22px;")
-            title#icon-title-arrowdown Arrow down icon
-            use(xlink:href="static/feather-sprite.svg#arrow-down")
+        svg.Icon(role="img", aria-labelledby="icon-title-github")
+          title#icon-title-github Github icon
+          use(xlink:href="static/feather-sprite.svg#github")
+      a.OutlineIconButton.Animation.ZoomIn(
+        aria-label="Visit LinkedIn profile"
+        href="https://linkedin.com/in/ronnyhaase"
+        style="animation-delay: 500ms; animation-duration: 750ms;"
+      )
+        svg.Icon(role="img", aria-labelledby="icon-title-linkedin")
+          title#icon-title-linkedin LinkedIn icon
+          use(xlink:href="static/feather-sprite.svg#linkedin")
+      a.OutlineIconButton.Animation.ZoomIn(
+        aria-label="Visit Twitter profile"
+        href="https://twitter.com/ronnyhaase"
+        style="animation-delay: 750ms; animation-duration: 750ms;"
+      )
+        svg.Icon(role="img", aria-labelledby="icon-title-twitter")
+          title#icon-title-twitter Twitter icon
+          use(xlink:href="static/feather-sprite.svg#twitter")
+      a.OutlineIconButton.Animation.ZoomIn(
+        aria-label="Send e-mail"
+        href="mailto:ronhaase@gmail.com"
+        style="animation-delay: 1000ms; animation-duration: 750ms;"
+      )
+        svg.Icon(role="img", aria-labelledby="icon-title-mail")
+          title#icon-title-mail Mail icon
+          use(xlink:href="static/feather-sprite.svg#mail")
+  div.mb-2
+    a.IconButton.Animation.FadeIn(
+      aria-label="Skip to main content"
+      href="#main-content"
+      style="animation-delay: 1500ms; animation-duration: 500ms; box-shadow: 1px 1px 6px rgba(0,0,0,.5); padding: .5rem;"
+    )
+      svg.Icon(role="img", aria-labelledby="icon-title-arrowdown", style="width: 22px; height: 22px;")
+        title#icon-title-arrowdown Arrow down icon
+        use(xlink:href="static/feather-sprite.svg#arrow-down")

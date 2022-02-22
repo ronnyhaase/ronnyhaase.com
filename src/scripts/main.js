@@ -1,7 +1,43 @@
+function debounce (fn, wait) {
+  let t
+  return function () {
+    clearTimeout(t)
+    t = setTimeout(() => fn.apply(this, arguments), wait)
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   setupTracking()
+  setupSmoothScroll()
+  setupParallax()
   runAnimations()
-});
+})
+
+function setupParallax () {
+  const updateParallaxEffect = () => {
+    const currentScrollY = window.scrollY
+    const maxScrollY = document.body.clientHeight
+    const relativeScrollY = Math.max(0, 1 - (currentScrollY / maxScrollY))
+    document.getElementById('intro').style.transform = `scale(${relativeScrollY}, ${relativeScrollY})`
+  }
+
+  document.addEventListener('scroll', debounce(ev => {
+    updateParallaxEffect()
+  }, 1))
+}
+
+function setupSmoothScroll() {
+  const samePageAnchorElements = document.querySelectorAll('a[href^="#"]')
+  samePageAnchorElements.forEach(el => el.addEventListener('click', ev => {
+    ev.preventDefault()
+
+    const scrollTarget = document.querySelector(
+      ev.currentTarget.getAttribute('href')
+    )
+    const top = scrollTarget.getBoundingClientRect().top + window.scrollY
+    window.scrollTo({ top, behavior: 'smooth' })
+  }))
+}
 
 function runAnimations() {
   document.querySelectorAll('#intro .Animation').forEach(el => {
