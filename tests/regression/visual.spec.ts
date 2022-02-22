@@ -11,7 +11,6 @@ const test = baseTest.extend<{ _autoSnapshotSuffix: void }>({
 
 test.skip('Visual Regressions', async ({ page }) => {
   const breakpoints = [
-    { name: 'xs', size: 0 },
     { name: 'sm', size: 576 },
     { name: 'md', size: 768 },
     { name: 'lg', size: 992 },
@@ -23,7 +22,7 @@ test.skip('Visual Regressions', async ({ page }) => {
   // Wait for intro animation to finish
   await page.waitForTimeout(2000);
   for (let breakpoint of breakpoints) {
-    await page.setViewportSize({ width: breakpoint.size, height: 480 })
+    await page.setViewportSize({ width: breakpoint.size, height: 720 })
     expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(`home-${breakpoint.name}.png`)
   }
 })
