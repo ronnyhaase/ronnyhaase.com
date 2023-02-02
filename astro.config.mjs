@@ -12,5 +12,10 @@ import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind(), sitemap(), prefetch()]
+  integrations: [
+    prefetch(),
+    react(),
+    sitemap(),
+    tailwind({ config: { applyBaseStyles: false } }),
+  ],
 });
