@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentScrollY = window.scrollY
     // const maxScrollY = document.body.clientHeight
     const maxScrollY = document.getElementById('intro').clientHeight
-    const relativeScrollY = Math.max(0, (currentScrollY / maxScrollY)) * 10
+    const relativeScrollY = Math.max(0, (currentScrollY / maxScrollY) * 5)
     document.getElementById('intro').style.filter = `blur(${relativeScrollY}px)`
   }
 

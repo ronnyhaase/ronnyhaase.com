@@ -28,7 +28,7 @@ import IconButton from '../components/icon-button.astro'
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	</head>
 	<body id="top" class="bg-brand bg-noise text-base md:text-lg text-white">
-		<nav id="intro" class="container min-h-screen flex flex-col items-center justify-center overflow-hidden">
+		<nav id="intro" class="fixed left-0 top-0 w-full min-h-screen flex flex-col items-center justify-center overflow-hidden container">
 			<div class="grow flex flex-col items-center justify-center">
 				<h1
 					class="text-5xl font-light leading-normal drop-shadow-lg shadow-black animate-fade-in-left animate-duration-1000 animate-paused"
@@ -113,7 +113,7 @@ import IconButton from '../components/icon-button.astro'
 				<ArrowDownIcon className="w-7 h-7 stroke-2 stroke-foreground fill-none" />
 			</a>
 		</nav>
-		<div class="flex flex-col min-h-screen bg-background dark:bg-gray-dark text-foreground dark:text-white">
+		<div class="relative flex flex-col min-h-screen mt-[100vh] bg-background dark:bg-gray-dark text-foreground dark:text-white">
 			<main id="main-content" class="container grow flex items-center py-4">
 				<div class="max-w-prose leading-loose mx-auto">
 					<div class="text-center">
