@@ -28,10 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Blur intro on scroll
   const updateParallaxEffect = () => {
     const currentScrollY = window.scrollY
-    // const maxScrollY = document.body.clientHeight
-    const maxScrollY = document.getElementById('intro').clientHeight
-    const relativeScrollY = Math.max(0, (currentScrollY / maxScrollY) * 5)
-    document.getElementById('intro').style.filter = `blur(${relativeScrollY}px)`
+    const maxScrollY = document.body.clientHeight
+    const relativeScrollY = Math.max(0, (currentScrollY / maxScrollY))
+    document.getElementById('intro').style.filter = `blur(${relativeScrollY * 5}px)`
   }
 
   document.addEventListener('scroll', debounce(ev => {
