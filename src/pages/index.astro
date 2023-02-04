@@ -1,4 +1,6 @@
 ---
+import { Image } from '@astrojs/image/components'
+
 import '../global.css'
 
 import ArrowDownIcon from '../components/icons/arrow-down.astro'
@@ -65,7 +67,7 @@ import IconButton from '../components/icon-button.astro'
 						Building great software and teams.
 					</h3>
 				</div>
-				<img
+				<Image
 					id="profile-image-jonnie"
 					class={
 						'my-4 rounded-full border-2 border-white shadow-md shadow-black' +
@@ -73,8 +75,8 @@ import IconButton from '../components/icon-button.astro'
 					}
 					alt="Ronny Avatar (Jonnie #3 by Kiki & Mozart)"
 					src="/images/jonnie3.jpg"
-					width="384"
-					height="384"
+					width={384}
+					height={384}
 				/>
 				<ul class="flex">
 					<li>
@@ -135,14 +137,14 @@ import IconButton from '../components/icon-button.astro'
 			<main id="main-content" class="container grow flex items-center py-4">
 				<div class="max-w-prose leading-loose mx-auto">
 					<div class="text-center">
-						<img
+						<Image
 							class={
 								'inline my-4 rounded-full border-2 border-white shadow-md shadow-black'
 							}
 							alt="Ronny Haase"
 							src="/images/ronnyhaase.jpg"
-							width="192"
-							height="192"
+							width={192}
+							height={192}
 						/>
 					</div>
 					<p class="mb-2">Hi, I'm Ronny!</p>
