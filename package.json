@@ -1,30 +1,29 @@
 {
   "name": "ronnyhaase.com",
-  "version": "3.5.2",
+  "version": "4.0.0",
   "author": "Ronny Haase <ronnyhaase@fastmail.com>",
   "description": "",
   "license": "GPL-3.0-or-later",
-  "source": "src/index.pug",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "build": "parcel build",
-    "build-start": "npm run build && npm run start",
-    "dev": "parcel -p 3000",
-    "start": "serve dist -p 3000 --no-port-switching",
-    "test": "start-server-and-test build-start 3000 'test:run'",
-    "test:run": "playwright test",
-    "test:watch": "playwright-watch test"
-  },
-  "devDependencies": {
-    "@parcel/transformer-pug": "^2.6.2",
-    "@parcel/transformer-sass": "^2.6.2",
-    "@playwright/test": "^1.24.2",
-    "parcel": "^2.6.2",
-    "playwright-watch": "^1.3.23",
-    "serve": "^14.1.1",
-    "start-server-and-test": "^1.14.0"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "ronalize.css": "^1.2.0"
+    "@astrojs/prefetch": "^0.1.1",
+    "@astrojs/react": "^2.0.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^3.0.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "astro": "^2.0.1",
+    "astro-compress": "^1.1.29",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.4"
   }
 }

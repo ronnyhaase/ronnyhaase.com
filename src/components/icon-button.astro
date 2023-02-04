@@ -1,0 +1,16 @@
+---
+const {
+  as: Element = 'button',
+  className,
+  effects = false,
+  ...props
+} = Astro.props
+const classes = 'inline-flex m-1 p-4 border-2 border-white rounded-full'
+  + (effects ? ' transition-transform hover:scale-125' : '')
+---
+<Element
+  class={`${className ? className + ' ' : ''}${classes}`}
+  {...props}
+>
+  <slot />
+</Element>
