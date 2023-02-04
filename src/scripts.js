@@ -9,9 +9,18 @@ function debounce (fn, wait) {
 document.addEventListener("DOMContentLoaded", () => {
   // Run animations
   document.querySelectorAll('.animate-paused').forEach(el => {
+    el.style.willChange = 'transform, opacity'
+    el.classList.toggle('opacity-0')
+    el.classList.remove('animate-direction-reverse')
     el.classList.remove('animate-paused')
     el.classList.add('animate-running')
   })
+  setTimeout(
+    () => document
+      .querySelectorAll('.animate-running')
+      .forEach(el => el.style.willChange = 'auto')
+    , 2000
+  )
 
   // Smooth scroll
   const samePageAnchorElements = document.querySelectorAll('a[href^="#"]')

@@ -14,6 +14,15 @@ module.exports = {
 			1000: '1000ms',
 			1500: '1500ms',
 		},
+		animationDirection: {
+			'alternate': 'alternate',
+			'alternate-reverse': 'alternate-reverse',
+			'inherit': 'inherit',
+			'normal': 'normal',
+			'reverse': 'reverse',
+			'revert-layer': 'revert-layer',
+			'unset': 'unset',
+		},
 		animationDuration: {
 			0: '0',
 			100: '100ms',
@@ -114,6 +123,12 @@ module.exports = {
 			matchUtilities(
 				{ 'animate-delay': (val) => ({ animationDelay: val }) },
 				{ values: theme('animationDelay' )},
+			)
+		}),
+		plugin(({ matchUtilities, theme}) => {
+			matchUtilities(
+				{ 'animate-direction': (val) => ({ animationDirection: val }) },
+				{ values: theme('animationDirection' )},
 			)
 		}),
 		plugin(({ matchUtilities, theme}) => {

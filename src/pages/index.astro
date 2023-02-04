@@ -49,12 +49,12 @@ import IconButton from '../components/icon-button.astro'
 		<nav id="intro" class="fixed left-0 top-0 w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
 			<div class="container grow flex flex-col items-center justify-center">
 				<h1
-					class="text-5xl font-light leading-normal drop-shadow-lg shadow-black animate-fade-in-left animate-duration-1000 animate-paused"
+					class="text-5xl font-light leading-normal drop-shadow-lg shadow-black opacity-0 animate-fade-in-left animate-duration-1000 animate-paused animate-direction-reverse"
 					style="text-shadow: 1px 1px 6px #0009;"
 				>
 					Ronny Haase
 				</h1>
-				<div class="animate-fade-in-right animate-duration-1000 animate-paused">
+				<div class="opacity-0 animate-fade-in-right animate-duration-1000 animate-paused animate-direction-reverse">
 					<h2
 						class="text-2xl font-light leading-tight"
 						style="text-shadow: 1px 1px 6px #0009;"
@@ -69,7 +69,7 @@ import IconButton from '../components/icon-button.astro'
 					id="profile-image-jonnie"
 					class={
 						'my-4 rounded-full border-2 border-white shadow-md shadow-black' +
-						' animate-fade-in-bottom animate-duration-1000 animate-paused'
+						' opacity-0 animate-fade-in-bottom animate-duration-1000 animate-paused animate-direction-reverse'
 					}
 					alt="Ronny Avatar (Jonnie #3 by Kiki & Mozart)"
 					src="/images/jonnie3.jpg"
@@ -83,7 +83,7 @@ import IconButton from '../components/icon-button.astro'
 							href="https://github.com/ronnyhaase"
 							title="Github"
 							effects={true}
-							className="opacity-0 animate-zoom-in animate-duration-750 animate-delay-250 animate-paused"
+							className="-opacity-0 animate-zoom-in animate-duration-750 animate-delay-250 animate-paused animate-direction-reverse"
 						>
 							<GithubIcon className="w-7 h-7 stroke-2 stroke-white fill-none" />
 						</IconButton>
@@ -94,7 +94,7 @@ import IconButton from '../components/icon-button.astro'
 							href="https://linkedin.com/in/ronnyhaase"
 							title="LinkedIn"
 							effects={true}
-							className="opacity-0 animate-zoom-in animate-duration-750 animate-delay-500 animate-paused"
+							className="-opacity-0 animate-zoom-in animate-duration-750 animate-delay-500 animate-paused animate-direction-reverse"
 						>
 							<LinkedinIcon className="w-7 h-7 stroke-2 stroke-white fill-none" />
 						</IconButton>
@@ -105,7 +105,7 @@ import IconButton from '../components/icon-button.astro'
 							href="https://twitter.com/ronnyhaase"
 							title="Twitter"
 							effects={true}
-							className="opacity-0 animate-zoom-in animate-duration-750 animate-delay-750 animate-paused"
+							className="-opacity-0 animate-zoom-in animate-duration-750 animate-delay-750 animate-paused animate-direction-reverse"
 						>
 							<TwitterIcon className="w-7 h-7 stroke-2 stroke-white fill-none" />
 						</IconButton>
@@ -116,7 +116,7 @@ import IconButton from '../components/icon-button.astro'
 							href="mailto:ronnyhaase@duck.com"
 							title="E-Mail"
 							effects={true}
-							className="opacity-0 animate-zoom-in animate-duration-750 animate-delay-1000 animate-paused"
+							className="-opacity-0 animate-zoom-in animate-duration-750 animate-delay-1000 animate-paused animate-direction-reverse"
 						>
 							<MailIcon className="w-7 h-7 stroke-2 stroke-white fill-none" />
 						</IconButton>
@@ -126,7 +126,7 @@ import IconButton from '../components/icon-button.astro'
 			<a
 				href="#main-content"
 				title="Skip to content"
-				class="inline-flex m-1 mb-3 p-2 border-2 border-white rounded-full bg-white shadow-md shadow-black opacity-0 animate-fade-in animate-duration-500 animate-delay-1500 animate-paused"
+				class="inline-flex m-1 mb-3 p-2 border-2 border-white rounded-full bg-white shadow-md shadow-black animate-fade-in animate-duration-500 animate-delay-1500 animate-paused animate-direction-reverse"
 			>
 				<ArrowDownIcon className="w-7 h-7 stroke-2 stroke-foreground fill-none" />
 			</a>
@@ -136,11 +136,10 @@ import IconButton from '../components/icon-button.astro'
 				<div class="max-w-prose leading-loose mx-auto">
 					<div class="text-center">
 						<img
-							id="profile-image-jonnie"
 							class={
 								'inline my-4 rounded-full border-2 border-white shadow-md shadow-black'
 							}
-							alt="Ronny Avatar (Jonnie #3 by Kiki & Mozart)"
+							alt="Ronny Haase"
 							src="/images/ronnyhaase.jpg"
 							width="192"
 							height="192"
