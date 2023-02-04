@@ -1,7 +1,10 @@
 {
-  "name": "@example/minimal",
+  "name": "ronnyhaase.com",
+  "version": "4.0.0",
+  "author": "Ronny Haase <ronnyhaase@fastmail.com>",
+  "description": "",
+  "license": "GPL-3.0-or-later",
   "type": "module",
-  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
