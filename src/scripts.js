@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const relativeScrollY = Math.max(0, (currentScrollY / maxScrollY))
     document.getElementById('intro').style.filter = `blur(${relativeScrollY * 5}px)`
   }
-
   document.addEventListener('scroll', debounce(ev => {
     updateParallaxEffect()
   }, 1))

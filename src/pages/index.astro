@@ -27,8 +27,15 @@ import IconButton from '../components/icon-button.astro'
 		<meta name="msvalidate.01" content="F61A93D2330E05629E3CE2D98AC9C739" />
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	</head>
-	<body id="top" class="bg-brand bg-noise text-base md:text-lg text-white">
-		<nav id="intro" class="fixed left-0 top-0 w-full min-h-screen flex flex-col items-center justify-center overflow-hidden container">
+	<body class="bg-brand bg-noise text-base md:text-lg text-white">
+		<a id="top" class="absolute top-0 left-0"></a>
+		<a
+			href="#main-content"
+			class="sr-only focus:not-sr-only text-white"
+		>
+			Skip to content
+		</a>
+		<nav id="intro" class="fixed left-0 top-0 w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
 			<div class="grow flex flex-col items-center justify-center">
 				<h1
 					class="text-5xl font-light leading-normal drop-shadow-lg shadow-black animate-fade-in-left animate-duration-1000 animate-paused"
