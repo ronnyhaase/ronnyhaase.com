@@ -1,73 +1,121 @@
 ---
-import { Image } from '@astrojs/image/components'
+import { Image } from "astro:assets"
 
-import '../global.css'
+import "../global.css"
 
-import ArrowDownIcon from '../components/icons/arrow-down.astro'
-import GithubIcon from '../components/icons/github.astro'
-import LinkedinIcon from '../components/icons/linkedin.astro'
-import MailIcon from '../components/icons/mail.astro'
-import TwitterIcon from '../components/icons/twitter.astro'
-import IconButton from '../components/icon-button.astro'
+import ArrowDownIcon from "../components/icons/arrow-down.astro"
+import GithubIcon from "../components/icons/github.astro"
+import LinkedinIcon from "../components/icons/linkedin.astro"
+import MailIcon from "../components/icons/mail.astro"
+import TwitterIcon from "../components/icons/twitter.astro"
+import IconButton from "../components/icon-button.astro"
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Ronny Haase &bull; Lead Frontend / Full-Stack Software Engineer &amp; Software Architect</title>
-		<meta name="description" content="Hi, I'm Ronny! I am a Frontend / Full-Stack Software Engineer & -Architect with 15+ years of experience building highly scalable web-based solutions." />
-		<meta property="og:title" content="Ronny Haase ∙ Lead Frontend / Full-Stack Software Engineer & -Architect" />
-		<meta property="og:description" content="Hi, I'm Ronny! I am a Frontend / Full-Stack Software Engineer & -Architect with 15+ years of experience building highly scalable web-based solutions." />
+		<title>
+			Ronny Haase &bull; Lead Frontend / Full-Stack Software Engineer &amp;
+			Software Architect
+		</title>
+		<meta
+			name="description"
+			content="Hi, I'm Ronny! I am a Frontend / Full-Stack Software Engineer & -Architect with 20+ years of experience building highly scalable web-based solutions."
+		/>
+		<meta
+			property="og:title"
+			content="Ronny Haase ∙ Lead Frontend / Full-Stack Software Engineer & -Architect"
+		/>
+		<meta
+			property="og:description"
+			content="Hi, I'm Ronny! I am a Frontend / Full-Stack Software Engineer & -Architect with 20+ years of experience building highly scalable web-based solutions."
+		/>
 		<meta property="og:url" content="https://ronnyhaase.com" />
-		<meta property="og:image" content="https://ronnyhaase.com/images/ronnyhaase-preview-1200.jpg" />
+		<meta
+			property="og:image"
+			content="https://ronnyhaase.com/images/ronnyhaase-preview-1200.jpg"
+		/>
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:description" content="Ronny Haase ∙ Lead Frontend / Full-Stack Software Engineer & -Architect with 15+ years of experience building highly scalable web-based solutions." />
-		<meta name="twitter:image" content="https://ronnyhaase.com/images/ronnyhaase-preview-1200.jpg" />
-		<meta name="twitter:image:alt" content="Ronny Haase ∙ Lead Frontend / Full-Stack Software Engineer & -Architect" />
+		<meta
+			name="twitter:description"
+			content="Ronny Haase ∙ Lead Frontend / Full-Stack Software Engineer & -Architect with 20+ years of experience building highly scalable web-based solutions."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://ronnyhaase.com/images/ronnyhaase-preview-1200.jpg"
+		/>
+		<meta
+			name="twitter:image:alt"
+			content="Ronny Haase ∙ Lead Frontend / Full-Stack Software Engineer & -Architect"
+		/>
 		<meta name="twitter:site" content="@ronnyhaase" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+		/>
 		<meta name="msvalidate.01" content="F61A93D2330E05629E3CE2D98AC9C739" />
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-		<script defer data-domain="ronnyhaase.com" src="https://plausible.io/js/plausible.js"></script>
-		<link rel="preload" as="font" type="font/woff2" href="/fonts/noto-sans-v27-latin-300.woff2" />
-		<link rel="preload" as="font" type="font/woff" href="/fonts/noto-sans-v27-latin-300.woff" />
-		<link rel="preload" as="font" type="font/woff2" href="/fonts/noto-sans-v27-latin-regular.woff2" />
-		<link rel="preload" as="font" type="font/woff" href="/fonts/noto-sans-v27-latin-regular.woff" />
+		<script
+			defer
+			data-domain="ronnyhaase.com"
+			src="https://plausible.io/js/plausible.js"></script>
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/fonts/noto-sans-v27-latin-300.woff2"
+		/>
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff"
+			href="/fonts/noto-sans-v27-latin-300.woff"
+		/>
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/fonts/noto-sans-v27-latin-regular.woff2"
+		/>
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff"
+			href="/fonts/noto-sans-v27-latin-regular.woff"
+		/>
 	</head>
-	<body class="bg-brand bg-noise text-base md:text-lg text-white">
-		<i id="top" class="absolute top-0 left-0"></i>
-		<a
-			href="#main-content"
-			class="sr-only focus:not-sr-only text-white"
-		>
+	<body class="bg-brand bg-noise text-base text-white md:text-lg">
+		<i id="top" class="absolute left-0 top-0"></i>
+		<a href="#main-content" class="sr-only text-white focus:not-sr-only">
 			Skip to content
 		</a>
-		<nav id="intro" class="fixed left-0 top-0 w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
-			<div class="container grow flex flex-col items-center justify-center">
+		<nav
+			id="intro"
+			class="fixed left-0 top-0 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden"
+		>
+			<div class="container flex grow flex-col items-center justify-center">
 				<h1
-					class="my-4 text-4xl sm:text-5xl font-light leading-normal drop-shadow-lg shadow-black opacity-0 animate-fade-in-left animate-duration-1000 animate-paused animate-direction-reverse"
+					class="animate-fade-in-left animate-duration-1000 animate-paused animate-direction-reverse my-4 text-4xl font-light leading-normal opacity-0 shadow-black drop-shadow-lg sm:text-5xl"
 					style="text-shadow: 1px 1px 6px #0009;"
 				>
 					Ronny Haase
 				</h1>
-				<div class="opacity-0 animate-fade-in-right animate-duration-1000 animate-paused animate-direction-reverse">
+				<div
+					class="animate-fade-in-right animate-duration-1000 animate-paused animate-direction-reverse opacity-0"
+				>
 					<h2
-						class="text-xl sm:text-2xl font-light leading-tight"
+						class="text-xl font-light leading-tight sm:text-2xl"
 						style="text-shadow: 1px 1px 6px #0009;"
 					>
 						Software Engineer &amp; -Architect
 					</h2>
-					<h3 class="text-lg sm:text-xl">
-						Building great software and teams.
-					</h3>
+					<h3 class="text-lg sm:text-xl">Building great software and teams.</h3>
 				</div>
 				<Image
 					id="profile-image-jonnie"
-					class={
-						'my-4 rounded-full border-2 border-white shadow-md shadow-black' +
-						' max-w-[16rem] sm:max-w-full' +
-						' opacity-0 animate-fade-in-bottom animate-duration-1000 animate-paused animate-direction-reverse'
-					}
+					class={"my-4 rounded-full border-2 border-white shadow-md shadow-black" +
+						" max-w-[16rem] sm:max-w-full" +
+						" opacity-0 animate-fade-in-bottom animate-duration-1000 animate-paused animate-direction-reverse"}
 					alt="Ronny Avatar (Jonnie #3 by Kiki & Mozart)"
 					src="/images/jonnie3.jpg"
 					width={384}
@@ -83,7 +131,7 @@ import IconButton from '../components/icon-button.astro'
 							effects={true}
 							className="-opacity-0 animate-zoom-in animate-duration-750 animate-delay-250 animate-paused animate-direction-reverse"
 						>
-							<GithubIcon className="w-7 h-7 stroke-2 stroke-white fill-none" />
+							<GithubIcon className="h-7 w-7 fill-none stroke-white stroke-2" />
 						</IconButton>
 					</li>
 					<li>
@@ -94,7 +142,9 @@ import IconButton from '../components/icon-button.astro'
 							effects={true}
 							className="-opacity-0 animate-zoom-in animate-duration-750 animate-delay-500 animate-paused animate-direction-reverse"
 						>
-							<LinkedinIcon className="w-7 h-7 stroke-2 stroke-white fill-none" />
+							<LinkedinIcon
+								className="h-7 w-7 fill-none stroke-white stroke-2"
+							/>
 						</IconButton>
 					</li>
 					<li>
@@ -105,7 +155,9 @@ import IconButton from '../components/icon-button.astro'
 							effects={true}
 							className="-opacity-0 animate-zoom-in animate-duration-750 animate-delay-750 animate-paused animate-direction-reverse"
 						>
-							<TwitterIcon className="w-7 h-7 stroke-2 stroke-white fill-none" />
+							<TwitterIcon
+								className="h-7 w-7 fill-none stroke-white stroke-2"
+							/>
 						</IconButton>
 					</li>
 					<li>
@@ -116,7 +168,7 @@ import IconButton from '../components/icon-button.astro'
 							effects={true}
 							className="-opacity-0 animate-zoom-in animate-duration-750 animate-delay-1000 animate-paused animate-direction-reverse"
 						>
-							<MailIcon className="w-7 h-7 stroke-2 stroke-white fill-none" />
+							<MailIcon className="h-7 w-7 fill-none stroke-white stroke-2" />
 						</IconButton>
 					</li>
 				</ul>
@@ -124,19 +176,21 @@ import IconButton from '../components/icon-button.astro'
 			<a
 				href="#main-content"
 				title="Skip to content"
-				class="inline-flex m-1 mb-10 sm:mb-3 p-2 border-2 border-white rounded-full bg-white shadow-md shadow-black animate-fade-in animate-duration-500 animate-delay-1500 animate-paused animate-direction-reverse"
+				class="animate-fade-in animate-duration-500 animate-delay-1500 animate-paused animate-direction-reverse m-1 mb-10 inline-flex rounded-full border-2 border-white bg-white p-2 shadow-md shadow-black sm:mb-3"
 			>
-				<ArrowDownIcon className="w-7 h-7 stroke-2 stroke-foreground fill-none" />
+				<ArrowDownIcon
+					className="stroke-foreground h-7 w-7 fill-none stroke-2"
+				/>
 			</a>
 		</nav>
-		<div class="relative flex flex-col min-h-screen mt-[100vh] bg-background dark:bg-gray-dark text-foreground dark:text-white">
-			<main id="main-content" class="container grow flex items-center py-4">
-				<div class="max-w-prose leading-loose mx-auto">
+		<div
+			class="bg-background dark:bg-gray-dark text-foreground relative mt-[100vh] flex min-h-screen flex-col dark:text-white"
+		>
+			<main id="main-content" class="container flex grow items-center py-4">
+				<div class="mx-auto max-w-prose leading-loose">
 					<div class="text-center">
 						<Image
-							class={
-								'inline my-4 rounded-full border-2 border-white shadow-md shadow-black'
-							}
+							class={"inline my-4 rounded-full border-2 border-white shadow-md shadow-black"}
 							alt="Ronny Haase"
 							src="/images/ronnyhaase.jpg"
 							width={192}
@@ -145,32 +199,38 @@ import IconButton from '../components/icon-button.astro'
 					</div>
 					<p class="mb-2">Hi, I'm Ronny!</p>
 					<p class="mb-2">
-						I'm developing reliable, maintainable and scalable web based solutions for more than 15
-						years with focus but by no means limited to front-end engineering, and built and lead
-						great teams to do the same.
+						I'm developing reliable, maintainable and scalable web based
+						solutions for more than 20 years with focus but by no means limited
+						to front-end engineering, and built and lead great teams to do the
+						same.
 					</p>
 					<p class="mb-2">
-						I offer excellent knowledge and multiple years of experience with designing, developing,
-						testing and optimizing highly-scalable web solutions as well as enabling teams to be
-						productive & motivated, and grow personally and professionally.
+						I offer excellent knowledge and multiple years of experience with
+						designing, developing, testing and optimizing highly-scalable web
+						solutions as well as enabling teams to be productive & motivated,
+						and grow personally and professionally.
 					</p>
 					<p class="mb-2">
-						I've been working and consulting for companies at different stages (early-stage Startup to
-						publicly listed corporations), as well as products (MVP to massive scale), and agile teams
-						of different size and experience. I've been giving presentations, training and mentorship
-						on front-end and software-architecture topics either in general or for concrete projects.
+						I've been working and consulting for companies at different stages
+						(early-stage Startup to publicly listed corporations), as well as
+						products (MVP to massive scale), and agile teams of different size
+						and experience. I've been giving presentations, training and
+						mentorship on front-end and software-architecture topics either in
+						general or for concrete projects.
 					</p>
 				</div>
 			</main>
-			<footer class="py-4 bg-gray-bright dark:bg-gray-darker">
+			<footer class="bg-gray-bright dark:bg-gray-darker py-4">
 				<div class="container">
-					
-					<div class="max-w-prose mx-auto">
-						<p class="mb-2">Copyright &copy; Ronny Haase, 2011-2023</p>
+					<div class="mx-auto max-w-prose">
+						<p class="mb-2">
+							Copyright &copy; Ronny Haase, 2011-{new Date().getFullYear()}
+						</p>
 
 						<p class="mb-2 text-sm">
-							The <a href="https://github.com/ronnyhaase/ronnyhaase.com">code of this website</a> is
-							open source under GPL v3 or later.
+							The <a href="https://github.com/ronnyhaase/ronnyhaase.com"
+								>code of this website</a
+							> is open source under GPL v3 or later.
 						</p>
 
 						<p class="mb-2">
@@ -184,8 +244,8 @@ import IconButton from '../components/icon-button.astro'
 						</p>
 
 						<p class="mb-2 text-sm">
-							This site sets no cookies and only does tracking that is absolutely anonymous and 100% GDRP,
-							CCPA & PECR compliant.
+							This site sets no cookies and only does tracking that is
+							absolutely anonymous and 100% GDRP, CCPA & PECR compliant.
 						</p>
 					</div>
 				</div>
