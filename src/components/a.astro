@@ -1,0 +1,8 @@
+---
+const { className, ...props } = Astro.props
+const classes = "text-link dark:text-link-dark"
+---
+
+<a class={`${className ? className + " " : ""}${classes}`} {...props}>
+	<slot />
+</a>

@@ -3,6 +3,7 @@ import { Image } from "astro:assets"
 
 import "../global.css"
 
+import A from "../components/a.astro"
 import ArrowDownIcon from "../components/icons/arrow-down.astro"
 import GithubIcon from "../components/icons/github.astro"
 import LinkedinIcon from "../components/icons/linkedin.astro"
@@ -223,6 +224,18 @@ import IconButton from "../components/icon-button.astro"
 						general principles or specific projects, I'm always eager to share
 						my knowledge and expertise.
 					</p>
+					<div class="my-4 text-center">
+						<a
+							class={"block md:inline-block transition-transform" +
+								" py-2 px-6 rounded-full drop-shadow-lg" +
+								" bg-primary active:bg-primary/75 text-white" +
+								" hover:scale-[1.0125] active:scale-[0.9875]"}
+							href="/ronnyhaase-resume.pdf"
+							target="_blank"
+						>
+							Download my Resumé
+						</a>
+					</div>
 				</div>
 			</main>
 			<footer class="bg-gray-bright dark:bg-gray-darker py-4">
@@ -233,19 +246,19 @@ import IconButton from "../components/icon-button.astro"
 						</p>
 
 						<p class="mb-2 text-sm">
-							The <a href="https://github.com/ronnyhaase/ronnyhaase.com"
-								>code of this website</a
+							The <A href="https://github.com/ronnyhaase/ronnyhaase.com"
+								>code of this website</A
 							> is open source under GPL v3 or later.
 						</p>
 
 						<p class="mb-2">
-							<a href="#top">Back to Top</a>
+							<A href="#top">Back to Top</A>
 						</p>
 
 						<p class="mb-2">
-							<a href="https://github.com/ronnyhaase">GitHub</a> &bull;
-							<a href="https://linkedin.com/in/ronnyhaase">LinkedIn</a> &bull;
-							<a href="https://twitter.com/ronnyhaase">Twitter</a>
+							<A href="https://github.com/ronnyhaase">GitHub</A> &bull;
+							<A href="https://linkedin.com/in/ronnyhaase">LinkedIn</A> &bull;
+							<A href="https://twitter.com/ronnyhaase">Twitter</A>
 						</p>
 
 						<p class="mb-2 text-sm">
