@@ -1,8 +1,10 @@
+import { Intro, Socials } from "./components";
+
 function HomePage() {
 	return (
-		<main className="max-w-5xl w-full mx-auto my-4 px-4">
-			<h1>Welcome!</h1>
-			<h2>This is a homepage.</h2>
+		<main className="max-w-4xl w-full mx-auto py-4 px-4">
+			<Intro className="mb-4" />
+			<Socials />
 		</main>
 	);
 }
