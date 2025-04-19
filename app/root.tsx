@@ -10,29 +10,22 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
+import "~/app.css";
+import { colorSchema } from "~/cookies.server";
+import { Header } from "~/components";
+
+async function loader({ request }: Route.LoaderArgs) {
+	const cookieHeader = request.headers.get("Cookie");
+	console.log(cookieHeader);
+	const cookie = (await colorSchema.parse(cookieHeader)) || {};
+	console.log(cookie);
+	return { colorSchema: cookie.colorSchema };
+}
 
 const links: Route.LinksFunction = () => [];
 
 function Layout({ children }: { children: React.ReactNode }) {
-	return (
-		<html lang="en" prefix="og: https://ogp.me/ns#">
-			<head>
-				<meta charSet="utf-8" />
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1"
-				/>
-				<Meta />
-				<Links />
-			</head>
-			<body>
-				{children}
-				<ScrollRestoration />
-				<Scripts />
-			</body>
-		</html>
-	);
+	return children;
 }
 
 function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
@@ -64,8 +57,29 @@ function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
 	);
 }
 
-function App() {
-	return <Outlet />;
+function App({ loaderData }: Route.ComponentProps) {
+	const { colorSchema } = loaderData;
+	console.log(loaderData);
+	return (
+		<html lang="en" prefix="og: https://ogp.me/ns#" className={colorSchema}>
+			<head>
+				<meta charSet="utf-8" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1"
+				/>
+				<Meta />
+				<Links />
+			</head>
+			<body>
+				<Header />
+				<Outlet />
+				<ScrollRestoration />
+				<Scripts />
+			</body>
+		</html>
+	);
 }
 
-export { App as default, ErrorBoundary, Layout, links };
+export { ErrorBoundary, Layout, loader, links };
+export default App;

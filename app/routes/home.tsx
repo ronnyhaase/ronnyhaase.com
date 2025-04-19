@@ -18,4 +18,5 @@ function HomeRoute() {
 	return <HomePage />;
 }
 
-export { HomeRoute as default, meta };
+export { meta };
+export default HomeRoute;
