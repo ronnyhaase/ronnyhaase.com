@@ -18,6 +18,32 @@ html {
 	@apply bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-white;
 }
 
-p {
-	@apply mb-1;
+a {
+	@apply text-pink-500;
+}
+
+strong {
+	@apply font-semibold;
+}
+
+svg.lucide {
+	@apply inline-block;
+}
+
+.content {
+	h1 {
+		@apply font-bold text-xl;
+	}
+	h2 {
+		@apply font-semibold text-lg;
+	}
+	p {
+		@apply mb-2;
+	}
+	table {
+		@apply w-full mb-2 table-auto;
+	}
+	ul {
+		@apply mb-2 list-disc list-inside;
+	}
 }

@@ -14,18 +14,13 @@ const Intro = ({ ...rest }: React.HTMLAttributes<HTMLDivElement>) => (
 				</h2>
 			</div>
 		</div>
-		<div>
-			<p>
-				I build end-to-end web solutions, can manage hosting, monitoring
-				and provide ongoing support.
-			</p>
-			<p>
-				I’m also great at jumping into teams, adding momentum, and
-				helping projects move forward.
-			</p>
-			<p>
-				I'm also available for consulting, training, and speaking
-				engagements.
+		<div className="my-4">
+			<p className="text-center">
+				I build end-to-end web solutions, including websites, web apps,
+				and mobile apps. I also manage hosting and provide ongoing
+				support. My strengths lie in joining teams to add momentum and
+				help projects advance, along with offering consulting, training,
+				and speaking engagements.
 			</p>
 		</div>
 	</div>
