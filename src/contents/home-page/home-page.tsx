@@ -1,13 +1,14 @@
-import { Clients, Intro, Skills, Socials } from "./components";
+import { ContentWrapper } from "@/components";
+import { About, Clients, Skills, Socials } from "./components";
 
 function HomePage() {
 	return (
-		<>
-			<Intro className="mb-4" />
+		<ContentWrapper>
+			<About className="mb-8" />
 			<Socials className="mb-8" />
 			<Clients className="mb-8" />
 			<Skills />
-		</>
+		</ContentWrapper>
 	);
 }
 

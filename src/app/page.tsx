@@ -1,5 +1,7 @@
 import { HomePage } from "@/contents";
 
-export default function Home() {
+function HomeRoute() {
 	return <HomePage />;
 }
+
+export { HomeRoute as default };
