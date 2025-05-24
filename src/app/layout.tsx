@@ -28,11 +28,13 @@ export default async function RootLayout({
 
 	return (
 		<html lang="en" className={isDarkMode ? "dark" : ""}>
+			<head>
+				<link rel="preload" as="image" href="/bg-grid--dark.png" />
+				<link rel="preload" as="image" href="/bg-grid--light.png" />
+			</head>
 			<body className={`${poppins.variable} antialiased flex flex-col`}>
 				<Header />
-				<main className="flex-grow p-4">
-					<div className="max-w-4xl w-full mx-auto">{children}</div>
-				</main>
+				<>{children}</>
 				<footer className="p-4 bg-gray-100 dark:bg-gray-900">
 					<div className="max-w-4xl w-full mx-auto">
 						Copyright &copy; Ronny Haase, 2011 -{" "}

@@ -15,7 +15,7 @@ body {
 }
 
 html {
-	@apply bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-white;
+	@apply bg-white dark:bg-gray-900 text-gray-800 dark:text-white;
 }
 
 a {
@@ -46,4 +46,16 @@ svg.lucide {
 	ul {
 		@apply mb-2 list-disc list-inside;
 	}
+}
+
+.Intro {
+	background-image:
+		linear-gradient(to bottom, #fff0, var(--color-gray-50)),
+		url("/bg-grid--light.png");
+}
+
+.dark .Intro {
+	background-image:
+		linear-gradient(to bottom, #11182700, #030712),
+		url("/bg-grid--dark.png");
 }

@@ -57,7 +57,7 @@ const ColorSchemaSwitch = ({}) => {
 
 	return (
 		<ToggleGroup
-			className="py-2"
+			className="p-2 rounded-lg bg-gray-50 dark:bg-gray-950"
 			type="single"
 			// Prevent hydration mismatch
 			value={isMounted ? colorSchema : undefined}

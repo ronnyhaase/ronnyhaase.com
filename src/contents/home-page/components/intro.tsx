@@ -1,7 +1,17 @@
+import { TextFadeIn } from "@/components";
+import { clsx } from "clsx";
+
 function Intro() {
 	return (
-		<div className="w-screen h-screen bg-gradient-to-b from-white to-gray-50">
-			Great ideas mean nothing without great execution.
+		<div
+			className={clsx(
+				"Intro w-full min-h-full flex flex-col items-center justify-center",
+				"text-gray-700 dark:text-gray-300 text-2xl sm:text-4xl md:text-6xl: xl:text-6xl whitespace-pre-wrap",
+			)}
+		>
+			<TextFadeIn
+				text={"Great ideas\nmean nothing\nwithout great execution."}
+			/>
 		</div>
 	);
 }
