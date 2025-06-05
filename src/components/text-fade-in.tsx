@@ -1,18 +1,10 @@
 "use client";
 
 import * as motion from "motion/react-client";
-import { useEffect, useId, useRef } from "react";
+import { useId } from "react";
 
 function TextFadeIn({ text }: { text: string }) {
 	const id = useId();
-	const mainY = useRef(0);
-
-	useEffect(() => {
-		if (typeof window !== "undefined") {
-			const mainEl = window.document.querySelector("main");
-			if (mainEl) mainY.current = mainEl.getBoundingClientRect().y;
-		}
-	}, []);
 
 	const container = {
 		hidden: {},
@@ -34,14 +26,11 @@ function TextFadeIn({ text }: { text: string }) {
 			initial="hidden"
 			animate="show"
 			onAnimationComplete={() => {
-				setTimeout(
-					() =>
-						window.scrollTo({
-							behavior: "smooth",
-							top: mainY.current,
-						}),
-					1000,
-				);
+				setTimeout(() => {
+					window.document
+						.querySelector("main")!
+						.scrollIntoView({ behavior: "smooth" });
+				}, 1500);
 			}}
 		>
 			{text.split("").map((char, index) =>
