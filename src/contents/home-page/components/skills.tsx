@@ -34,15 +34,15 @@ const skills = [
 	"...",
 ];
 
-const Skills = ({ ...rest }: React.HTMLAttributes<HTMLDivElement>) => (
-	<div {...rest}>
+const Skills = () => (
+	<>
 		<h2 className="mb-2 text-xl font-semibold">Super Powers</h2>
 		<div className="flex flex-wrap gap-1">
 			{skills.map((skill) => (
 				<Badge key={`skill-${skill}`}>{skill}</Badge>
 			))}
 		</div>
-	</div>
+	</>
 );
 
 export { Skills };

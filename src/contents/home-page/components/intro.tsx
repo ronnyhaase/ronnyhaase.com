@@ -9,9 +9,7 @@ function Intro() {
 				"text-gray-700 dark:text-gray-300 text-2xl sm:text-4xl lg:text-6xl xl:text-8xl whitespace-pre-wrap",
 			)}
 		>
-			<TextFadeIn
-				text={"Great ideas\nmean nothing\nwithout great execution."}
-			/>
+			<TextFadeIn text={"Great ideas\nNeed great execution."} />
 		</div>
 	);
 }

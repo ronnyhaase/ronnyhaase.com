@@ -1,5 +1,3 @@
-import { type ClassValue } from "clsx";
-
 // prettier-ignore
 const Pekuna = () => (
 	<svg width="356" height="70" viewBox="0 0 356 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,9 +54,9 @@ const STTalent = () => (
 	</svg>
 );
 
-function Clients({ ...rest }: React.HTMLAttributes<HTMLDivElement>) {
+function Clients() {
 	return (
-		<div {...rest}>
+		<>
 			<h2 className="mb-2 text-xl font-semibold">Happy Clients</h2>
 			<ul className="text-center">
 				<li className="inline-block">
@@ -71,7 +69,7 @@ function Clients({ ...rest }: React.HTMLAttributes<HTMLDivElement>) {
 					<STTalent />
 				</li>
 			</ul>
-		</div>
+		</>
 	);
 }
 

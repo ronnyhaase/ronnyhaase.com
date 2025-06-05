@@ -5,9 +5,10 @@ import { ContentWrapper } from "@/components";
 
 function ImprintPage() {
 	return (
-		<ContentWrapper>
-			<Link className="inline-flex font-bold" href="/">
-				<ChevronLeftIcon /> Home
+		<ContentWrapper className="grow">
+			<Link className="inline-flex items-center font-bold" href="/">
+				<ChevronLeftIcon />
+				<span>Home</span>
 			</Link>
 			<div className="content mt-2">
 				<h1>Imprint</h1>

@@ -2,8 +2,8 @@ import { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon } from "lucide-react";
 
 import { Button } from "@/components";
 
-const Socials = ({ ...rest }: React.HTMLAttributes<HTMLDivElement>) => (
-	<div {...rest}>
+const Socials = () => (
+	<>
 		<div className="text-center">
 			<p className="text-lg">
 				Let’s connect and create something amazing together!
@@ -31,7 +31,7 @@ const Socials = ({ ...rest }: React.HTMLAttributes<HTMLDivElement>) => (
 				</a>
 			</div>
 		</div>
-	</div>
+	</>
 );
 
 export { Socials };

@@ -1,5 +1,5 @@
-const About = ({ ...rest }: React.HTMLAttributes<HTMLDivElement>) => (
-	<div {...rest}>
+const About = () => (
+	<>
 		<div className="flex flex-col md:flex-row gap-4 mb-2">
 			<img
 				className="size-32 mx-auto rounded-full"
@@ -23,7 +23,7 @@ const About = ({ ...rest }: React.HTMLAttributes<HTMLDivElement>) => (
 				and speaking engagements.
 			</p>
 		</div>
-	</div>
+	</>
 );
 
 export { About };
