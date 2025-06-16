@@ -18,6 +18,10 @@ html {
 	@apply bg-white dark:bg-gray-900 text-gray-800 dark:text-white;
 }
 
+*:focus {
+	@apply outline-pink-500 outline-offset-2;
+}
+
 a {
 	@apply text-pink-500;
 }
@@ -58,4 +62,8 @@ svg.lucide {
 	background-image:
 		linear-gradient(to bottom, #11182700, #030712),
 		url("/bg-grid--dark.png");
+}
+
+.Button {
+	@apply p-2 rounded bg-gray-950 hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300 text-white dark:text-gray-800;
 }

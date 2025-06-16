@@ -39,7 +39,12 @@ const Skills = () => (
 		<h2 className="mb-2 text-xl font-semibold">Super Powers</h2>
 		<div className="flex flex-wrap gap-1">
 			{skills.map((skill) => (
-				<Badge key={`skill-${skill}`}>{skill}</Badge>
+				<Badge
+					key={`skill-${skill}`}
+					className="active:bg-pink-500 hover:bg-pink-500 active:text-white hover:text-white transition-colors duration-150"
+				>
+					{skill}
+				</Badge>
 			))}
 		</div>
 	</>
