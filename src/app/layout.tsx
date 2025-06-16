@@ -13,9 +13,32 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-	title: "Ronny Haase • Freelance Frontend / Full-Stack Software Engineer &; Software Architect",
+	title: "Ronny Haase • Freelance Frontend / Full-Stack Software Engineer & Software Architect",
 	description:
 		"Ronny Haase • Frontend / Full-Stack Software Engineer & -Architect with 20+ years of experience building highly scalable web-based solutions.",
+	keywords: [
+		"Ronny Haase",
+		"Freelance Software Engineer",
+		"Freelance Frontend Engineer",
+		"Freelance Full-stack Engineer",
+		"Freelance Web Developer",
+	],
+	openGraph: {
+		title: "Ronny Haase • Freelance Frontend / Full-Stack Software Engineer",
+		description:
+			"Ronny Haase • Frontend / Full-Stack Software Engineer & -Architect with 20+ years of experience building highly scalable web-based solutions.",
+		siteName:
+			"Ronny Haase • Freelance Frontend / Full-Stack Software Engineer",
+		images: ["/preview.jpg"],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Ronny Haase • Freelance Frontend / Full-Stack Software Engineer",
+		description:
+			"Ronny Haase • Frontend / Full-Stack Software Engineer & -Architect with 20+ years of experience building highly scalable web-based solutions.",
+		site: "@ronnyhaase",
+		images: ["/preview.jpg"],
+	},
 };
 
 export default async function RootLayout({
