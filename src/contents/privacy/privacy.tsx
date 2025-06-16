@@ -35,21 +35,22 @@ function PrivacyPolicyPage() {
 
 				<h2>2. Data Collected</h2>
 				<p>
-					When visiting this website, the following anonymous data is
-					automatically stored in server log files:
+					When visiting this website, the following anonymized data
+					may be collected and stored in server logs for 24 hours:
 				</p>
-
 				<ul>
+					<li>Time of server request</li>
 					<li>Browser type and version</li>
 					<li>Operating system</li>
 					<li>Referrer URL</li>
-					<li>Hostname of the accessing device (anonymized)</li>
-					<li>Time of server request</li>
+					<li>Country (derived from IP address)</li>
+					<li>Visited paths</li>
 				</ul>
-
 				<p>
-					These logs are used solely for technical monitoring and
-					security. No personal analysis is performed.
+					This data is also aggregated and processed via Vercel
+					Analytics to understand website usage and performance. No
+					personal profiling or individual tracking is possible nor
+					performed.
 				</p>
 
 				<h2>3. Cookies</h2>
