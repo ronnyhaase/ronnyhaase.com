@@ -1,5 +1,8 @@
-import { TextFadeIn } from "@/components";
 import { clsx } from "clsx";
+import { ArrowDownIcon } from "lucide-react";
+import * as motion from "motion/react-client";
+
+import { TextFadeIn } from "@/components";
 
 function Intro() {
 	return (
@@ -10,6 +13,24 @@ function Intro() {
 			)}
 		>
 			<TextFadeIn text={"Great ideas\nNeed great execution."} />
+			<motion.div
+				className="mt-8"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, y: [0, -16, 0] }}
+				transition={{
+					opacity: {
+						delay: 1,
+					},
+					y: {
+						duration: 1,
+						repeat: Infinity,
+						repeatType: "loop",
+						ease: "easeInOut",
+					},
+				}}
+			>
+				<ArrowDownIcon size={64} />
+			</motion.div>
 		</div>
 	);
 }
