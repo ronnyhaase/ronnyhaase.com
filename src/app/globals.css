@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+	--font-sans:
+		"Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body {
+	@apply w-full h-full;
+}
+
+html {
+	@apply bg-white dark:bg-gray-900 text-gray-800 dark:text-white;
+}
+
+*:focus {
+	@apply outline-pink-500 outline-offset-2;
+}
+
+a {
+	@apply text-pink-500;
+}
+
+strong {
+	@apply font-semibold;
+}
+
+svg.lucide {
+	@apply inline-block;
+}
+
+.content {
+	h1 {
+		@apply font-bold text-xl;
+	}
+	h2 {
+		@apply font-semibold text-lg;
+	}
+	p {
+		@apply mb-2;
+	}
+	table {
+		@apply w-full mb-2 table-auto;
+	}
+	ul {
+		@apply mb-2 list-disc list-inside;
+	}
+}
+
+.Intro {
+	background-image:
+		linear-gradient(to bottom, #fff0, var(--color-gray-50)),
+		url("/bg-grid--light.png");
+}
+
+.dark .Intro {
+	background-image:
+		linear-gradient(to bottom, #11182700, #030712),
+		url("/bg-grid--dark.png");
+}
+
+.Button {
+	@apply p-2 rounded bg-gray-950 hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300 text-white dark:text-gray-800;
+}
