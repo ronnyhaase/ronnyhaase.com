@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { type Metadata } from "next";
 import { Poppins } from "next/font/google";
 
@@ -75,6 +76,7 @@ export default async function RootLayout({
 						</p>
 					</div>
 				</footer>
+				<Analytics />
 			</body>
 		</html>
 	);
