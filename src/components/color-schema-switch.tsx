@@ -2,11 +2,21 @@
 
 import cookies from "js-cookie";
 import { MonitorCogIcon, MoonIcon, SunIcon } from "lucide-react";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 import { ToggleGroup, ToggleGroupItem } from "@/components";
 
 type ColorSchema = "dark" | "light" | "system";
+
+const getColorSchemaSetting = (): ColorSchema => {
+	const colorSchemaSetting = cookies.get("color-schema");
+
+	if (colorSchemaSetting === "dark" || colorSchemaSetting === "light") {
+		return colorSchemaSetting;
+	}
+
+	return "system";
+};
 
 const updateColorSchema = () => {
 	const colorSchemaSetting = cookies.get("color-schema");
@@ -19,12 +29,12 @@ const updateColorSchema = () => {
 };
 
 const ColorSchemaSwitch = ({}) => {
-	const [isMounted, setIsMounted] = useState(false);
-	useEffect(() => {
-		setIsMounted(true);
-	}, []);
+	const [colorSchema, setColorSchema] = useState<ColorSchema>("system");
+	const [hasResolvedColorSchema, setHasResolvedColorSchema] = useState(false);
 
 	useLayoutEffect(() => {
+		setColorSchema(getColorSchemaSetting());
+		setHasResolvedColorSchema(true);
 		updateColorSchema();
 
 		const darkModeMediaQuery = window.matchMedia(
@@ -36,11 +46,9 @@ const ColorSchemaSwitch = ({}) => {
 			darkModeMediaQuery.removeEventListener("change", updateColorSchema);
 	}, []);
 
-	const [colorSchema, setColorSchema] = useState<ColorSchema>(
-		(cookies.get("color-schema") as ColorSchema | undefined) || "system",
-	);
-
 	useLayoutEffect(() => {
+		if (!hasResolvedColorSchema) return;
+
 		switch (colorSchema) {
 			case "dark":
 				cookies.set("color-schema", "dark");
@@ -53,14 +61,13 @@ const ColorSchemaSwitch = ({}) => {
 				break;
 		}
 		updateColorSchema();
-	}, [colorSchema]);
+	}, [colorSchema, hasResolvedColorSchema]);
 
 	return (
 		<ToggleGroup
 			className="p-2 rounded-lg bg-gray-50 dark:bg-gray-950"
 			type="single"
-			// Prevent hydration mismatch
-			value={isMounted ? colorSchema : undefined}
+			value={colorSchema}
 			onValueChange={(value) => {
 				if (value) setColorSchema(value as ColorSchema);
 			}}
