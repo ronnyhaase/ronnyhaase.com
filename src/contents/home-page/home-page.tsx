@@ -1,7 +1,14 @@
 import * as motion from "motion/react-client";
 
 import { ContentWrapper } from "@/components";
-import { About, Clients, Intro, Skills, Socials } from "./components";
+import {
+	About,
+	Clients,
+	Intro,
+	OpenSource,
+	Skills,
+	Socials,
+} from "./components";
 import { Variants } from "motion/react";
 
 function HomePage() {
@@ -43,6 +50,15 @@ function HomePage() {
 						className="mb-8"
 					>
 						<Clients />
+					</motion.div>
+					<motion.div
+						variants={section}
+						initial="hidden"
+						whileInView="show"
+						viewport={{ amount: "some", once: true }}
+						className="mb-8"
+					>
+						<OpenSource />
 					</motion.div>
 					<motion.div
 						variants={section}
