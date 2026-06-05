@@ -9,18 +9,19 @@ const About = () => (
 			<div className="flex-grow flex flex-col justify-center text-xl">
 				<h1 className="font-bold">Hi, I'm Ronny! 👋</h1>
 				<h2 className="">
-					I'm passionate freelance Full-Stack Software Engineer and
-					-Architect with 20+ years of experience.
+					I'm a passionate Full-Stack Software Engineer and -Architect
+					with 20+ years of experience.
 				</h2>
 			</div>
 		</div>
 		<div className="my-4">
 			<p className="text-center">
-				I build end-to-end web solutions, including websites, web apps,
-				and mobile apps. I also manage hosting and provide ongoing
-				support. My strengths lie in joining teams to add momentum and
-				help projects advance, along with offering consulting, training,
-				and speaking engagements.
+				I currently work full-time, and now and then take on freelance
+				side projects. I build end-to-end web solutions, including
+				websites, web apps, and mobile apps. My strengths lie in joining
+				teams to add momentum, help projects advance, and share
+				experience through consulting, training, speaking engagements,
+				and open-source work.
 			</p>
 		</div>
 	</>
