@@ -1,10 +1,33 @@
 "use client";
 
 import * as motion from "motion/react-client";
-import { useId } from "react";
+import { useEffect, useId } from "react";
+
+declare global {
+	interface Window {
+		didUserScroll?: boolean;
+	}
+}
 
 function TextFadeIn({ text }: { text: string }) {
 	const id = useId();
+
+	useEffect(() => {
+		const markUserScrolled = () => {
+			window.didUserScroll = true;
+		};
+
+		window.didUserScroll ??= false;
+
+		window.addEventListener("scroll", markUserScrolled, {
+			once: true,
+			passive: true,
+		});
+
+		return () => {
+			window.removeEventListener("scroll", markUserScrolled);
+		};
+	}, []);
 
 	const container = {
 		hidden: {},
@@ -27,9 +50,13 @@ function TextFadeIn({ text }: { text: string }) {
 			animate="show"
 			onAnimationComplete={() => {
 				setTimeout(() => {
+					if (window.didUserScroll) {
+						return;
+					}
+
 					window.document
-						.querySelector("main")!
-						.scrollIntoView({ behavior: "smooth" });
+						.querySelector("main")
+						?.scrollIntoView({ behavior: "smooth" });
 				}, 1500);
 			}}
 		>
